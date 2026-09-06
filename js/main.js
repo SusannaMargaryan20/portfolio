@@ -1,93 +1,749 @@
-(function () {
-'use strict';
+const body = document.body;
 
-const themeBtn = document.getElementById('theme-btn');
-const stored = localStorage.getItem('sm-theme');
-if (stored) {
-document.documentElement.setAttribute('data-theme', stored);
-} else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-document.documentElement.setAttribute('data-theme', 'light');
+const header =
+  document.getElementById("header");
+
+const themeToggle =
+  document.getElementById(
+    "themeToggle"
+  );
+
+const mobileMenuBtn =
+  document.getElementById(
+    "mobileMenuBtn"
+  );
+
+const mobileNav =
+  document.getElementById(
+    "mobileNav"
+  );
+
+const languageButtons =
+  document.querySelectorAll(
+    ".language-btn"
+  );
+
+const translatableElements =
+  document.querySelectorAll(
+    "[data-en][data-hy]"
+  );
+
+const currentYear =
+  document.getElementById(
+    "currentYear"
+  );
+
+/* -----------------------
+   Current year
+----------------------- */
+
+currentYear.textContent =
+  new Date().getFullYear();
+
+/* -----------------------
+   Header scroll state
+----------------------- */
+
+const updateHeader = () => {
+  header.classList.toggle(
+    "scrolled",
+    window.scrollY > 20
+  );
+};
+
+updateHeader();
+
+window.addEventListener(
+  "scroll",
+  updateHeader
+);
+
+/* -----------------------
+   Theme
+----------------------- */
+
+const savedTheme =
+  localStorage.getItem(
+    "portfolio-theme"
+  );
+
+if (
+  savedTheme === "light"
+) {
+  body.classList.add(
+    "light-theme"
+  );
 }
 
-themeBtn.addEventListener('click', function () {
-const cur = document.documentElement.getAttribute('data-theme');
-const next = cur === 'dark' ? 'light' : 'dark';
-document.documentElement.setAttribute('data-theme', next);
-localStorage.setItem('sm-theme', next);
-});
+themeToggle.addEventListener(
+  "click",
+  () => {
+    body.classList.toggle(
+      "light-theme"
+    );
 
-const mobToggle = document.getElementById('mobile-toggle');
-const mobNav = document.getElementById('mobile-nav');
+    const theme =
+      body.classList.contains(
+        "light-theme"
+      )
+        ? "light"
+        : "dark";
 
-mobToggle.addEventListener('click', function () {
-const exp = mobToggle.getAttribute('aria-expanded') === 'true';
-mobToggle.setAttribute('aria-expanded', String(!exp));
-mobNav.classList.toggle('open');
-mobNav.setAttribute('aria-hidden', String(exp));
-document.body.style.overflow = exp ? '' : 'hidden';
-});
+    localStorage.setItem(
+      "portfolio-theme",
+      theme
+    );
+  }
+);
 
-mobNav.querySelectorAll('a').forEach(function (a) {
-a.addEventListener('click', function () {
-mobToggle.setAttribute('aria-expanded', 'false');
-mobNav.classList.remove('open');
-mobNav.setAttribute('aria-hidden', 'true');
-document.body.style.overflow = '';
-});
-});
+/* -----------------------
+   Mobile navigation
+----------------------- */
 
-const header = document.getElementById('site-header');
-let ticking = false;
+const closeMobileMenu = () => {
+  mobileNav.classList.remove(
+    "open"
+  );
 
-window.addEventListener('scroll', function () {
-if (!ticking) {
-window.requestAnimationFrame(function () {
-header.classList.toggle('scrolled', window.scrollY > 20);
-ticking = false;
-});
-ticking = true;
+  body.classList.remove(
+    "menu-open"
+  );
+
+  mobileMenuBtn.setAttribute(
+    "aria-expanded",
+    "false"
+  );
+};
+
+mobileMenuBtn.addEventListener(
+  "click",
+  () => {
+    const isOpen =
+      mobileNav.classList.toggle(
+        "open"
+      );
+
+    body.classList.toggle(
+      "menu-open",
+      isOpen
+    );
+
+    mobileMenuBtn.setAttribute(
+      "aria-expanded",
+      String(isOpen)
+    );
+  }
+);
+
+mobileNav
+  .querySelectorAll("a")
+  .forEach((link) => {
+    link.addEventListener(
+      "click",
+      closeMobileMenu
+    );
+  });
+
+/* -----------------------
+   Language switch
+----------------------- */
+
+const setLanguage = (
+  language
+) => {
+  translatableElements.forEach(
+    (element) => {
+      const translation =
+        element.dataset[
+          language
+        ];
+
+      if (translation) {
+        element.textContent =
+          translation;
+      }
+    }
+  );
+
+  languageButtons.forEach(
+    (button) => {
+      button.classList.toggle(
+        "active",
+        button.dataset.lang ===
+          language
+      );
+    }
+  );
+
+  document.documentElement.lang =
+    language === "hy"
+      ? "hy"
+      : "en";
+
+  localStorage.setItem(
+    "portfolio-language",
+    language
+  );
+};
+
+const savedLanguage =
+  localStorage.getItem(
+    "portfolio-language"
+  );
+
+if (savedLanguage) {
+  setLanguage(savedLanguage);
 }
-}, { passive: true });
 
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-link');
+languageButtons.forEach(
+  (button) => {
+    button.addEventListener(
+      "click",
+      () => {
+        setLanguage(
+          button.dataset.lang
+        );
+      }
+    );
+  }
+);
 
-const spy = new IntersectionObserver(function (entries) {
-entries.forEach(function (e) {
-if (e.isIntersecting) {
-const id = e.target.id;
-navLinks.forEach(function (l) {
-l.classList.toggle('active', l.getAttribute('data-section') === id);
-});
+/* -----------------------
+   Reveal animations
+----------------------- */
+
+const revealElements =
+  document.querySelectorAll(
+    ".reveal-left, .reveal-right, .reveal-up"
+  );
+
+const revealObserver =
+  new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(
+        (entry) => {
+          if (
+            entry.isIntersecting
+          ) {
+            entry.target.classList.add(
+              "visible"
+            );
+
+            observer.unobserve(
+              entry.target
+            );
+          }
+        }
+      );
+    },
+    {
+      threshold: 0.14,
+      rootMargin:
+        "0px 0px -50px 0px",
+    }
+  );
+
+revealElements.forEach(
+  (element) => {
+    revealObserver.observe(
+      element
+    );
+  }
+);
+
+/* -----------------------
+   Counters
+----------------------- */
+
+const counters =
+  document.querySelectorAll(
+    ".counter"
+  );
+
+let countersStarted = false;
+
+const counterSection =
+  document.querySelector(
+    ".stats-section"
+  );
+
+const animateCounter = (
+  counter
+) => {
+  const target =
+    Number(
+      counter.dataset.target
+    );
+
+  const duration = 1000;
+
+  const start =
+    performance.now();
+
+  const update = (time) => {
+    const progress =
+      Math.min(
+        (time - start) /
+          duration,
+        1
+      );
+
+    const eased =
+      1 -
+      Math.pow(
+        1 - progress,
+        3
+      );
+
+    counter.textContent =
+      Math.floor(
+        target * eased
+      );
+
+    if (progress < 1) {
+      requestAnimationFrame(
+        update
+      );
+    } else {
+      counter.textContent =
+        target;
+    }
+  };
+
+  requestAnimationFrame(update);
+};
+
+const counterObserver =
+  new IntersectionObserver(
+    (entries) => {
+      entries.forEach(
+        (entry) => {
+          if (
+            entry.isIntersecting &&
+            !countersStarted
+          ) {
+            countersStarted = true;
+
+            counters.forEach(
+              animateCounter
+            );
+          }
+        }
+      );
+    },
+    {
+      threshold: 0.4,
+    }
+  );
+
+if (counterSection) {
+  counterObserver.observe(
+    counterSection
+  );
 }
-});
-}, { rootMargin: '-40% 0px -55% 0px' });
 
-sections.forEach(function (s) { spy.observe(s); });
+/* -----------------------
+   Active navigation
+----------------------- */
 
-const reveal = new IntersectionObserver(function (entries) {
-entries.forEach(function (e) {
-if (e.isIntersecting) {
-e.target.classList.add('revealed');
-reveal.unobserve(e.target);
-}
-});
-}, { threshold: 0.12 });
+const sections =
+  document.querySelectorAll(
+    "main section[id]"
+  );
 
-document.querySelectorAll('[data-reveal]').forEach(function (el) {
-reveal.observe(el);
-});
+const desktopLinks =
+  document.querySelectorAll(
+    ".desktop-nav a"
+  );
 
-document.getElementById('year').textContent = new Date().getFullYear();
+const setActiveNav = () => {
+  let currentId = "";
 
-document.querySelectorAll('a[href^="#"]').forEach(function (a) {
-a.addEventListener('click', function (e) {
-const targetId = a.getAttribute('href').substring(1);
-const t = document.getElementById(targetId);
-if (t) {
-e.preventDefault();
-t.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-});
-});
-})();
+  sections.forEach(
+    (section) => {
+      const top =
+        section.offsetTop -
+        150;
+
+      const bottom =
+        top +
+        section.offsetHeight;
+
+      if (
+        window.scrollY >=
+          top &&
+        window.scrollY <
+          bottom
+      ) {
+        currentId =
+          section.id;
+      }
+    }
+  );
+
+  desktopLinks.forEach(
+    (link) => {
+      link.classList.toggle(
+        "active",
+        link.getAttribute(
+          "href"
+        ) ===
+          `#${currentId}`
+      );
+    }
+  );
+};
+
+window.addEventListener(
+  "scroll",
+  setActiveNav
+);
+
+setActiveNav();
+
+/* -----------------------
+   Case study modal
+----------------------- */
+
+const projectData = {
+  "business-code": {
+    title:
+      "Business Code",
+
+    category:
+      "News & Media Platform",
+
+    description:
+      "Business Code is a modern news and media platform designed to make discovering and exploring large volumes of content fast and intuitive. It provides advanced search and filtering capabilities across articles, news stories and interviews.",
+
+    features: [
+      "Advanced Search",
+      "Content Discovery",
+      "Topic Filtering",
+      "Structured News Content",
+      "Responsive Experience",
+      "SEO-friendly Structure",
+    ],
+
+    url:
+      "https://bcode.news/",
+  },
+
+  "yerevan-city": {
+    title:
+      "Yerevan City",
+
+    category:
+      "Large-scale E-commerce / Retail",
+
+    description:
+      "Yerevan City is a large-scale online grocery and retail platform designed to provide a structured shopping experience across an extensive product catalog.",
+
+    features: [
+      "Large Product Catalog",
+      "Product Discovery",
+      "Search",
+      "Complex Categories",
+      "Promotions",
+      "Collections",
+      "Multilingual Experience",
+      "Responsive E-commerce",
+    ],
+
+    url:
+      "https://yerevan-city.am/shop/home",
+  },
+
+  alfapharm: {
+    title:
+      "AlfaPharm",
+
+    category:
+      "Healthcare / Pharmacy E-commerce",
+
+    description:
+      "AlfaPharm is an online pharmacy and healthcare e-commerce platform providing customers with convenient access to health, beauty and wellness products.",
+
+    features: [
+      "Healthcare",
+      "E-commerce",
+      "Product Catalog",
+      "Product Discovery",
+      "Categories",
+      "Responsive Shopping",
+    ],
+
+    url:
+      "https://www.alfapharm.am/",
+  },
+
+  rezx: {
+    title: "RezX",
+
+    category:
+      "Restaurant Technology / Reservation Platform / CRM",
+
+    description:
+      "RezX is a restaurant discovery, reservation and management ecosystem connecting diners with venues while providing businesses with tools for managing reservations and customer interactions.",
+
+    features: [
+      "Restaurant Discovery",
+      "Online Reservations",
+      "CRM",
+      "Reservation Management",
+      "Table Management",
+      "Guest Management",
+      "Responsive Experience",
+    ],
+
+    url:
+      "https://rezx.am/home",
+  },
+
+  petpace: {
+    title: "PetPace",
+
+    category:
+      "PetTech / IoT / Health Monitoring",
+
+    description:
+      "PetPace is a connected pet health monitoring ecosystem. I worked on the administration interface connected to the smart pet wearable ecosystem, providing pet management, veterinary-related workflows and access to health-related information.",
+
+    features: [
+      "IoT Integration",
+      "Pet Management",
+      "Health Monitoring",
+      "Temperature Data",
+      "Health Data Visualization",
+      "Veterinary Workflows",
+      "Complex Dashboards",
+    ],
+
+    url:
+      "https://petpace.com/",
+  },
+
+  "watch-gallery": {
+    title:
+      "WATCH GALLERY",
+
+    category:
+      "Shopify / E-commerce",
+
+    description:
+      "A premium multi-brand watch e-commerce experience designed around elegant product discovery, trust, storytelling and conversion-focused shopping.",
+
+    features: [
+      "Shopify",
+      "Liquid",
+      "Theme Customization",
+      "Custom Sections",
+      "Product Architecture",
+      "Collections",
+      "Responsive Design",
+      "E-commerce UX",
+      "SEO",
+    ],
+
+    url: "",
+  },
+};
+
+const modal =
+  document.getElementById(
+    "caseStudyModal"
+  );
+
+const modalTitle =
+  document.getElementById(
+    "modalTitle"
+  );
+
+const modalCategory =
+  document.getElementById(
+    "modalCategory"
+  );
+
+const modalDescription =
+  document.getElementById(
+    "modalDescription"
+  );
+
+const modalFeatures =
+  document.getElementById(
+    "modalFeatures"
+  );
+
+const modalLink =
+  document.getElementById(
+    "modalLink"
+  );
+
+const openModal = (
+  projectKey
+) => {
+  const project =
+    projectData[projectKey];
+
+  if (!project) {
+    return;
+  }
+
+  modalTitle.textContent =
+    project.title;
+
+  modalCategory.textContent =
+    project.category;
+
+  modalDescription.textContent =
+    project.description;
+
+  modalFeatures.innerHTML = "";
+
+  project.features.forEach(
+    (feature) => {
+      const span =
+        document.createElement(
+          "span"
+        );
+
+      span.textContent =
+        feature;
+
+      modalFeatures.appendChild(
+        span
+      );
+    }
+  );
+
+  if (project.url) {
+    modalLink.href =
+      project.url;
+
+    modalLink.style.display =
+      "inline-flex";
+  } else {
+    modalLink.style.display =
+      "none";
+  }
+
+  modal.classList.add(
+    "open"
+  );
+
+  body.style.overflow =
+    "hidden";
+};
+
+const closeModal = () => {
+  modal.classList.remove(
+    "open"
+  );
+
+  body.style.overflow = "";
+};
+
+document
+  .querySelectorAll(
+    ".case-study-btn"
+  )
+  .forEach((button) => {
+    button.addEventListener(
+      "click",
+      () => {
+        openModal(
+          button.dataset.project
+        );
+      }
+    );
+  });
+
+document
+  .querySelectorAll(
+    "[data-close-modal]"
+  )
+  .forEach((element) => {
+    element.addEventListener(
+      "click",
+      closeModal
+    );
+  });
+
+document.addEventListener(
+  "keydown",
+  (event) => {
+    if (
+      event.key ===
+        "Escape" &&
+      modal.classList.contains(
+        "open"
+      )
+    ) {
+      closeModal();
+    }
+  }
+);
+
+/* -----------------------
+   Contact form
+----------------------- */
+
+const contactForm =
+  document.getElementById(
+    "contactForm"
+  );
+
+const formStatus =
+  document.getElementById(
+    "formStatus"
+  );
+
+contactForm.addEventListener(
+  "submit",
+  (event) => {
+    event.preventDefault();
+
+    const formData =
+      new FormData(
+        contactForm
+      );
+
+    const name =
+      formData.get("name");
+
+    const email =
+      formData.get("email");
+
+    const projectType =
+      formData.get(
+        "projectType"
+      );
+
+    const message =
+      formData.get(
+        "message"
+      );
+
+    const subject =
+      encodeURIComponent(
+        `${projectType} — Portfolio enquiry from ${name}`
+      );
+
+    const emailBody =
+      encodeURIComponent(
+        [
+          `Name: ${name}`,
+          `Email: ${email}`,
+          `Project Type: ${projectType}`,
+          "",
+          message,
+        ].join("\n")
+      );
+
+    formStatus.textContent =
+      "Opening your email application...";
+
+    window.location.href =
+      `mailto:margarsusanna5@gmail.com?subject=${subject}&body=${emailBody}`;
+  }
+);
