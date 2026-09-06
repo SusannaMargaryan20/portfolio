@@ -10,7 +10,7 @@
 
   <meta
     name="description"
-    content="Portfolio of Susanna Margaryan, Frontend Developer specializing in Angular, modern web applications, Shopify and e-commerce development."
+    content="Portfolio of Susanna Margaryan, Frontend Developer specializing in Angular, modern frontend architecture, Shopify and e-commerce development."
   />
 
   <meta
@@ -28,77 +28,78 @@
 </head>
 
 <body>
+
   <div class="page-bg page-bg-one"></div>
   <div class="page-bg page-bg-two"></div>
 
+  <!-- HEADER -->
+
   <header class="header" id="header">
     <div class="container header-container">
+
       <a href="#home" class="brand">
         <span class="brand-logo">SM</span>
-        <span class="brand-name">Susanna Margaryan</span>
+
+        <span class="brand-name">
+          Susanna Margaryan
+        </span>
       </a>
 
       <nav class="desktop-nav" aria-label="Primary navigation">
-        <a href="#about" data-en="About" data-hy="Իմ մասին">
+
+        <a href="#about" data-i18n="nav.about">
           About
         </a>
 
-        <a
-          href="#experience"
-          data-en="Experience"
-          data-hy="Փորձ"
-        >
+        <a href="#experience" data-i18n="nav.experience">
           Experience
         </a>
 
-        <a
-          href="#projects"
-          data-en="Projects"
-          data-hy="Նախագծեր"
-        >
+        <a href="#projects" data-i18n="nav.projects">
           Projects
         </a>
 
-        <a
-          href="#expertise"
-          data-en="Expertise"
-          data-hy="Մասնագիտացում"
-        >
+        <a href="#expertise" data-i18n="nav.expertise">
           Expertise
         </a>
 
-        <a
-          href="#skills"
-          data-en="Skills"
-          data-hy="Հմտություններ"
-        >
+        <a href="#skills" data-i18n="nav.skills">
           Skills
         </a>
 
-        <a
-          href="#contact"
-          data-en="Contact"
-          data-hy="Կապ"
-        >
+        <a href="#contact" data-i18n="nav.contact">
           Contact
         </a>
+
       </nav>
 
       <div class="header-actions">
+
         <div class="language-switch">
-          <button class="language-btn active" data-lang="en">
+
+          <button
+            class="language-btn active"
+            data-lang="en"
+            type="button"
+          >
             EN
           </button>
 
-          <button class="language-btn" data-lang="hy">
+          <button
+            class="language-btn"
+            data-lang="hy"
+            type="button"
+          >
             HY
           </button>
+
         </div>
 
         <button
           class="theme-toggle"
           id="themeToggle"
           aria-label="Toggle theme"
+          type="button"
         >
           <span class="theme-icon moon">☾</span>
           <span class="theme-icon sun">☀</span>
@@ -110,11 +111,7 @@
           download
         >
           <span>↓</span>
-
-          <span
-            data-en="Download CV"
-            data-hy="Ներբեռնել CV"
-          >
+          <span data-i18n="common.downloadCv">
             Download CV
           </span>
         </a>
@@ -124,12 +121,15 @@
           id="mobileMenuBtn"
           aria-label="Open menu"
           aria-expanded="false"
+          type="button"
         >
           <span></span>
           <span></span>
           <span></span>
         </button>
+
       </div>
+
     </div>
 
     <nav
@@ -137,83 +137,104 @@
       id="mobileNav"
       aria-label="Mobile navigation"
     >
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#expertise">Expertise</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#experience" data-i18n="nav.experience">Experience</a>
+      <a href="#projects" data-i18n="nav.projects">Projects</a>
+      <a href="#expertise" data-i18n="nav.expertise">Expertise</a>
+      <a href="#skills" data-i18n="nav.skills">Skills</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
+
   </header>
 
   <main>
+
+    <!-- HERO -->
+
     <section class="hero section" id="home">
+
       <div class="container hero-grid">
+
         <div class="hero-content reveal-left">
+
           <div class="availability-badge">
+
             <span class="availability-dot"></span>
 
-            <span
-              data-en="Available for new opportunities"
-              data-hy="Բաց եմ նոր հնարավորությունների համար"
-            >
+            <span data-i18n="hero.available">
               Available for new opportunities
             </span>
+
           </div>
 
           <h1>
-            <span
-              data-en="Building scalable applications"
-              data-hy="Ստեղծում եմ մասշտաբավորվող հավելվածներ"
-            >
+
+            <span data-i18n="hero.title1">
               Building scalable applications
             </span>
 
             <br />
 
-            <span>&amp;</span>
+            <span data-i18n="hero.and">
+              &
+            </span>
 
-            <span class="gradient-text">
+            <span
+              class="gradient-text"
+              data-i18n="hero.title2"
+            >
               high-converting digital experiences.
             </span>
+
           </h1>
 
-          <p class="hero-description">
-            I'm
-            <strong>Susanna Margaryan</strong>,
-            a Frontend Developer with
-            <strong>6 years of commercial experience</strong>
-            specializing in Angular, modern frontend architecture,
-            and e-commerce development.
+          <p
+            class="hero-description"
+            data-i18n="hero.description"
+          >
+            I'm Susanna Margaryan, a Frontend Developer with 6 years of
+            commercial experience specializing in Angular, modern frontend
+            architecture, and e-commerce development.
           </p>
 
           <div class="hero-tags">
+
             <span class="tag">
               <span class="tag-icon">A</span>
-              Angular Specialist
+
+              <span data-i18n="hero.angular">
+                Angular Specialist
+              </span>
             </span>
 
             <span class="tag">
               <span class="tag-icon">▣</span>
-              6 Years Experience
+
+              <span data-i18n="hero.experience">
+                6 Years Experience
+              </span>
             </span>
 
             <span class="tag">
               <span class="tag-icon">S</span>
-              Shopify &amp; E-commerce
+
+              <span data-i18n="hero.shopify">
+                Shopify & E-commerce
+              </span>
             </span>
+
           </div>
 
           <div class="hero-actions">
+
             <a href="#projects" class="btn btn-primary">
-              <span
-                data-en="View My Work"
-                data-hy="Դիտել աշխատանքներս"
-              >
+
+              <span data-i18n="common.viewWork">
                 View My Work
               </span>
 
               <span>→</span>
+
             </a>
 
             <a
@@ -223,10 +244,7 @@
             >
               <span>↓</span>
 
-              <span
-                data-en="Download CV"
-                data-hy="Ներբեռնել CV"
-              >
+              <span data-i18n="common.downloadCv">
                 Download CV
               </span>
             </a>
@@ -237,16 +255,15 @@
             >
               <span>✈</span>
 
-              <span
-                data-en="Let's Talk"
-                data-hy="Կապվենք"
-              >
+              <span data-i18n="common.letsTalk">
                 Let's Talk
               </span>
             </a>
+
           </div>
 
           <div class="social-links">
+
             <a
               href="https://www.linkedin.com/in/s-margaryan/"
               target="_blank"
@@ -271,259 +288,416 @@
             >
               ✉
             </a>
+
           </div>
+
         </div>
 
         <div class="hero-visual reveal-right">
+
           <div class="hero-orbit orbit-one"></div>
           <div class="hero-orbit orbit-two"></div>
 
           <div class="portrait-glow"></div>
 
           <div class="portrait-frame">
+
             <img
               src="./assets/images/me.jpg"
               alt="Susanna Margaryan"
               class="portrait"
             />
+
           </div>
 
-          <div class="floating-label frontend-label">
-            Frontend
-            <br />
-            Developer
+          <div
+            class="floating-label frontend-label"
+            data-i18n="hero.frontendDeveloper"
+          >
+            Frontend Developer
           </div>
 
           <div class="vertical-note">
-            <span>TURNING</span>
-            <span>IDEAS INTO</span>
-            <span>REAL PRODUCTS</span>
+
+            <span data-i18n="hero.turning">
+              TURNING
+            </span>
+
+            <span data-i18n="hero.ideas">
+              IDEAS INTO
+            </span>
+
+            <span data-i18n="hero.products">
+              REAL PRODUCTS
+            </span>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
 
+    <!-- STATS -->
+
     <section class="stats-section">
+
       <div class="container stats-grid">
+
         <article class="stat-card reveal-up">
+
           <div class="stat-icon">▣</div>
 
           <div>
             <strong class="counter" data-target="6">0</strong>
             <span class="plus">+</span>
 
-            <p>Years of Experience</p>
+            <p data-i18n="stats.years">
+              Years of Experience
+            </p>
           </div>
+
         </article>
 
         <article class="stat-card reveal-up">
+
           <div class="stat-icon">◇</div>
 
           <div>
             <strong class="counter" data-target="8">0</strong>
             <span class="plus">+</span>
 
-            <p>Commercial Projects</p>
+            <p data-i18n="stats.projects">
+              Commercial Projects
+            </p>
           </div>
+
         </article>
 
         <article class="stat-card reveal-up">
+
           <div class="stat-icon">◎</div>
 
           <div>
-            <strong>Multiple</strong>
-            <p>Business Domains</p>
+            <strong data-i18n="stats.multiple">
+              Multiple
+            </strong>
+
+            <p data-i18n="stats.domains">
+              Business Domains
+            </p>
           </div>
+
         </article>
 
         <article class="stat-card reveal-up">
+
           <div class="stat-icon">ϟ</div>
 
           <div>
-            <strong>End-to-End</strong>
-            <p>Product Development</p>
+            <strong data-i18n="stats.endToEnd">
+              End-to-End
+            </strong>
+
+            <p data-i18n="stats.productDevelopment">
+              Product Development
+            </p>
           </div>
+
         </article>
+
       </div>
+
     </section>
 
-    <section class="section about" id="about">
-      <div class="container">
-        <div class="about-grid">
-          <div class="reveal-left">
-            <span class="section-label">ABOUT ME</span>
+    <!-- ABOUT -->
 
-            <h2>
-              Frontend Developer
-              <br />
-              with a passion for
-              <br />
-              creating meaningful products.
+    <section class="section about" id="about">
+
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div class="reveal-left">
+
+            <span
+              class="section-label"
+              data-i18n="about.label"
+            >
+              ABOUT ME
+            </span>
+
+            <h2 data-i18n="about.title">
+              Frontend Developer with a passion for creating meaningful products.
             </h2>
 
-            <p>
-              I enjoy solving complex problems, building clean and
-              maintainable code, creating intuitive user interfaces,
-              and taking products from an idea to production.
+            <p data-i18n="about.paragraph1">
+              I enjoy solving complex problems, building clean and maintainable
+              code, creating intuitive user interfaces, and taking products from
+              an idea to production.
             </p>
 
-            <p>
-              Over the years, I've worked across e-commerce, media,
-              hospitality, healthcare, IoT and enterprise systems.
+            <p data-i18n="about.paragraph2">
+              Over the years, I've worked across e-commerce, media, hospitality,
+              healthcare, IoT and enterprise systems.
             </p>
 
-            <a href="#experience" class="text-btn">
-              More About Me
+            <a
+              href="#experience"
+              class="text-btn"
+            >
+              <span data-i18n="about.more">
+                More About Me
+              </span>
+
               <span>→</span>
             </a>
+
           </div>
 
           <div class="about-info-card reveal-up">
+
             <article>
+
               <div class="info-icon">⌖</div>
 
               <div>
-                <span>Based in</span>
-                <strong>Armenia</strong>
+                <span data-i18n="about.based">
+                  Based in
+                </span>
+
+                <strong data-i18n="about.armenia">
+                  Armenia
+                </strong>
               </div>
+
             </article>
 
             <article>
+
               <div class="info-icon">▣</div>
 
               <div>
-                <span>Commercial</span>
-                <strong>6 Years Experience</strong>
+                <span data-i18n="about.commercial">
+                  Commercial
+                </span>
+
+                <strong data-i18n="about.sixYears">
+                  6 Years Experience
+                </strong>
               </div>
+
             </article>
 
             <article>
+
               <div class="info-icon">&lt;/&gt;</div>
 
               <div>
-                <span>Frontend</span>
-                <strong>Engineering</strong>
+                <span data-i18n="about.frontend">
+                  Frontend
+                </span>
+
+                <strong data-i18n="about.engineering">
+                  Engineering
+                </strong>
               </div>
+
             </article>
 
             <article>
+
               <div class="info-icon">⌑</div>
 
               <div>
-                <span>E-commerce</span>
-                <strong>Development</strong>
+                <span data-i18n="about.ecommerce">
+                  E-commerce
+                </span>
+
+                <strong data-i18n="about.development">
+                  Development
+                </strong>
               </div>
+
             </article>
+
           </div>
 
           <blockquote class="about-quote reveal-right">
-            <p>
+
+            <p data-i18n="about.quote">
               “I believe great software is a combination of clean code,
-              thoughtful design and a deep understanding of the people
-              who use it.”
+              thoughtful design and a deep understanding of the people who use it.”
             </p>
 
-            <span>Susanna Margaryan</span>
+            <span>
+              Susanna Margaryan
+            </span>
+
           </blockquote>
+
         </div>
+
       </div>
+
     </section>
 
+    <!-- PROJECTS -->
+
     <section class="section projects" id="projects">
+
       <div class="container">
+
         <div class="section-header">
+
           <div>
-            <span class="section-label">
+
+            <span
+              class="section-label"
+              data-i18n="projects.label"
+            >
               FEATURED PROJECTS
             </span>
 
-            <h2>
+            <h2 data-i18n="projects.title">
               Selected commercial work
             </h2>
+
           </div>
+
         </div>
 
         <div class="projects-grid">
+
+          <!-- BUSINESS CODE -->
+
           <article class="project-card reveal-up">
+
             <div class="project-image-wrap">
+
               <img
                 src="./assets/images/bcode.png"
                 alt="Business Code project"
               />
+
             </div>
 
             <div class="project-body">
+
               <h3>Business Code</h3>
 
-              <span class="project-category">
-                News &amp; Media Platform
+              <span
+                class="project-category"
+                data-i18n="projects.businessCode.category"
+              >
+                News & Media Platform
               </span>
 
-              <p>
-                A modern news and media platform designed to make
-                discovering and exploring large volumes of content fast
-                and intuitive.
+              <p data-i18n="projects.businessCode.description">
+                A modern news and media platform designed to make discovering
+                and exploring large volumes of content fast and intuitive.
               </p>
 
               <div class="project-tags">
-                <span>News</span>
-                <span>Search</span>
-                <span>Content Discovery</span>
+
+                <span data-i18n="projects.tags.news">
+                  News
+                </span>
+
+                <span data-i18n="projects.tags.search">
+                  Search
+                </span>
+
+                <span data-i18n="projects.tags.discovery">
+                  Content Discovery
+                </span>
+
               </div>
 
               <div class="project-footer">
+
                 <button
                   class="case-study-btn"
                   data-project="business-code"
+                  type="button"
                 >
-                  View Case Study →
+                  <span data-i18n="common.viewCaseStudy">
+                    View Case Study
+                  </span>
+                  →
                 </button>
 
                 <a
                   href="https://bcode.news/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Visit Business Code"
                 >
                   ↗
                 </a>
+
               </div>
+
             </div>
+
           </article>
 
+          <!-- YEREVAN CITY -->
+
           <article class="project-card reveal-up">
+
             <div class="project-image-wrap">
+
               <img
                 src="./assets/images/city.png"
                 alt="Yerevan City project"
               />
+
             </div>
 
             <div class="project-body">
+
               <h3>Yerevan City</h3>
 
-              <span class="project-category">
+              <span
+                class="project-category"
+                data-i18n="projects.city.category"
+              >
                 E-commerce / Retail
               </span>
 
-              <p>
-                A large-scale grocery and retail platform with an
-                extensive catalog, structured navigation and modern
-                shopping experience.
+              <p data-i18n="projects.city.description">
+                A large-scale grocery and retail platform with an extensive
+                catalog, structured navigation and modern shopping experience.
               </p>
 
               <div class="project-tags">
-                <span>E-commerce</span>
-                <span>Product Catalog</span>
-                <span>Promotions</span>
+
+                <span data-i18n="projects.tags.ecommerce">
+                  E-commerce
+                </span>
+
+                <span data-i18n="projects.tags.catalog">
+                  Product Catalog
+                </span>
+
+                <span data-i18n="projects.tags.promotions">
+                  Promotions
+                </span>
+
               </div>
 
               <div class="project-footer">
+
                 <button
                   class="case-study-btn"
                   data-project="yerevan-city"
+                  type="button"
                 >
-                  View Case Study →
+                  <span data-i18n="common.viewCaseStudy">
+                    View Case Study
+                  </span>
+                  →
                 </button>
 
                 <a
@@ -533,43 +707,69 @@
                 >
                   ↗
                 </a>
+
               </div>
+
             </div>
+
           </article>
 
+          <!-- ALFAPHARM -->
+
           <article class="project-card reveal-up">
+
             <div class="project-image-wrap">
+
               <img
                 src="./assets/images/alpha.png"
                 alt="AlfaPharm project"
               />
+
             </div>
 
             <div class="project-body">
+
               <h3>AlfaPharm</h3>
 
-              <span class="project-category">
+              <span
+                class="project-category"
+                data-i18n="projects.alpha.category"
+              >
                 Healthcare / E-commerce
               </span>
 
-              <p>
-                An online pharmacy and healthcare e-commerce platform
-                providing convenient access to health, beauty and
-                wellness products.
+              <p data-i18n="projects.alpha.description">
+                An online pharmacy and healthcare e-commerce platform providing
+                convenient access to health, beauty and wellness products.
               </p>
 
               <div class="project-tags">
-                <span>Healthcare</span>
-                <span>E-commerce</span>
-                <span>Product Catalog</span>
+
+                <span data-i18n="projects.tags.healthcare">
+                  Healthcare
+                </span>
+
+                <span data-i18n="projects.tags.ecommerce">
+                  E-commerce
+                </span>
+
+                <span data-i18n="projects.tags.catalog">
+                  Product Catalog
+                </span>
+
               </div>
 
               <div class="project-footer">
+
                 <button
                   class="case-study-btn"
                   data-project="alfapharm"
+                  type="button"
                 >
-                  View Case Study →
+                  <span data-i18n="common.viewCaseStudy">
+                    View Case Study
+                  </span>
+                  →
                 </button>
 
                 <a
@@ -579,39 +779,64 @@
                 >
                   ↗
                 </a>
+
               </div>
+
             </div>
+
           </article>
 
+          <!-- REZX -->
+
           <article class="project-card reveal-up">
+
             <div class="project-placeholder">
+
               <span>RZ</span>
+
             </div>
 
             <div class="project-body">
+
               <h3>RezX</h3>
 
-              <span class="project-category">
+              <span
+                class="project-category"
+                data-i18n="projects.rezx.category"
+              >
                 Restaurant Technology / CRM
               </span>
 
-              <p>
-                A restaurant discovery, table reservation and
-                management ecosystem connecting diners and businesses.
+              <p data-i18n="projects.rezx.description">
+                A restaurant discovery, reservation and management ecosystem
+                connecting diners with venues and businesses.
               </p>
 
               <div class="project-tags">
-                <span>Reservations</span>
+
+                <span data-i18n="projects.tags.reservations">
+                  Reservations
+                </span>
+
                 <span>CRM</span>
-                <span>Guest Management</span>
+
+                <span data-i18n="projects.tags.guestManagement">
+                  Guest Management
+                </span>
+
               </div>
 
               <div class="project-footer">
+
                 <button
                   class="case-study-btn"
                   data-project="rezx"
+                  type="button"
                 >
-                  View Case Study →
+                  <span data-i18n="common.viewCaseStudy">
+                    View Case Study
+                  </span>
+                  →
                 </button>
 
                 <a
@@ -621,40 +846,62 @@
                 >
                   ↗
                 </a>
+
               </div>
+
             </div>
+
           </article>
 
+          <!-- PETPACE -->
+
           <article class="project-card reveal-up">
+
             <div class="project-placeholder">
               <span>PP</span>
             </div>
 
             <div class="project-body">
+
               <h3>PetPace</h3>
 
-              <span class="project-category">
+              <span
+                class="project-category"
+                data-i18n="projects.petpace.category"
+              >
                 PetTech / IoT / Health Monitoring
               </span>
 
-              <p>
-                Administration interface connected to a smart pet
-                wearable ecosystem for pet management and
-                health-related workflows.
+              <p data-i18n="projects.petpace.description">
+                Administration interface connected to a smart pet wearable
+                ecosystem for pet management and health-related workflows.
               </p>
 
               <div class="project-tags">
+
                 <span>IoT</span>
-                <span>Dashboards</span>
-                <span>Health Monitoring</span>
+
+                <span data-i18n="projects.tags.dashboards">
+                  Dashboards
+                </span>
+
+                <span data-i18n="projects.tags.healthMonitoring">
+                  Health Monitoring
+                </span>
+
               </div>
 
               <div class="project-footer">
+
                 <button
                   class="case-study-btn"
                   data-project="petpace"
+                  type="button"
                 >
-                  View Case Study →
+                  <span data-i18n="common.viewCaseStudy">
+                    View Case Study
+                  </span>
+                  →
                 </button>
 
                 <a
@@ -664,208 +911,300 @@
                 >
                   ↗
                 </a>
+
               </div>
+
             </div>
+
           </article>
 
+          <!-- WATCH GALLERY -->
+
           <article class="project-card reveal-up">
+
             <div class="project-placeholder shopify-placeholder">
               <span>WG</span>
             </div>
 
             <div class="project-body">
+
               <h3>WATCH GALLERY</h3>
 
-              <span class="project-category">
+              <span
+                class="project-category"
+                data-i18n="projects.watch.category"
+              >
                 Shopify / E-commerce
               </span>
 
-              <p>
-                Premium multi-brand watch e-commerce experience built
-                around elegant product discovery, storytelling and
-                conversion-focused shopping.
+              <p data-i18n="projects.watch.description">
+                Premium multi-brand watch e-commerce experience built around
+                elegant product discovery, storytelling and conversion-focused
+                shopping.
               </p>
 
               <div class="project-tags">
+
                 <span>Shopify</span>
                 <span>Liquid</span>
-                <span>Theme Development</span>
+
+                <span data-i18n="projects.tags.themeDevelopment">
+                  Theme Development
+                </span>
+
               </div>
 
               <div class="project-footer">
+
                 <button
                   class="case-study-btn"
                   data-project="watch-gallery"
+                  type="button"
                 >
-                  View Case Study →
+                  <span data-i18n="common.viewCaseStudy">
+                    View Case Study
+                  </span>
+                  →
                 </button>
+
               </div>
+
             </div>
+
           </article>
+
         </div>
+
       </div>
+
     </section>
+
+    <!-- SHOPIFY EXPERTISE -->
 
     <section class="section expertise" id="expertise">
-      <div class="container">
-        <div class="expertise-grid">
-          <div class="reveal-left">
-            <span class="section-label">
-              SHOPIFY &amp; E-COMMERCE
+
+      <div class="container expertise-grid">
+
+        <div class="reveal-left">
+
+          <span
+            class="section-label"
+            data-i18n="expertise.label"
+          >
+            SHOPIFY & E-COMMERCE
+          </span>
+
+          <h2>
+
+            <span data-i18n="expertise.title1">
+              Building complete
             </span>
 
-            <h2>
-              Building complete
-              <span class="gradient-text">
-                e-commerce experiences.
-              </span>
-            </h2>
+            <span
+              class="gradient-text"
+              data-i18n="expertise.title2"
+            >
+              e-commerce experiences.
+            </span>
 
-            <p>
-              Beyond enterprise frontend development, I build complete
-              Shopify experiences — from store architecture and theme
-              customization to custom Liquid development, product
-              structures, integrations and conversion-focused
-              storefronts.
+          </h2>
+
+          <p data-i18n="expertise.description">
+            Beyond enterprise frontend development, I build complete Shopify
+            experiences — from store architecture and theme customization to
+            custom Liquid development, product structures, integrations and
+            conversion-focused storefronts.
+          </p>
+
+          <a
+            href="#contact"
+            class="btn btn-primary"
+          >
+            <span data-i18n="expertise.cta">
+              Start a Shopify Project
+            </span>
+
+            <span>→</span>
+          </a>
+
+        </div>
+
+        <div class="expertise-list">
+
+          <article class="expertise-card reveal-up">
+
+            <span>01</span>
+
+            <h3 data-i18n="expertise.theme.title">
+              Theme Development
+            </h3>
+
+            <p data-i18n="expertise.theme.description">
+              Customizing and extending Shopify themes to create polished
+              branded storefronts.
             </p>
 
-            <a href="#contact" class="btn btn-primary">
-              Start a Shopify Project
-              <span>→</span>
-            </a>
-          </div>
+          </article>
 
-          <div class="expertise-list">
-            <article class="expertise-card reveal-up">
-              <span>01</span>
+          <article class="expertise-card reveal-up">
 
-              <h3>Theme Development</h3>
+            <span>02</span>
 
-              <p>
-                Customizing and extending Shopify themes to create
-                polished branded storefronts.
-              </p>
-            </article>
+            <h3 data-i18n="expertise.liquid.title">
+              Liquid Development
+            </h3>
 
-            <article class="expertise-card reveal-up">
-              <span>02</span>
+            <p data-i18n="expertise.liquid.description">
+              Custom Liquid sections, components, product templates and reusable
+              storefront functionality.
+            </p>
 
-              <h3>Liquid Development</h3>
+          </article>
 
-              <p>
-                Custom Liquid sections, components, product templates
-                and reusable storefront functionality.
-              </p>
-            </article>
+          <article class="expertise-card reveal-up">
 
-            <article class="expertise-card reveal-up">
-              <span>03</span>
+            <span>03</span>
 
-              <h3>Store Architecture</h3>
+            <h3 data-i18n="expertise.architecture.title">
+              Store Architecture
+            </h3>
 
-              <p>
-                Product structures, collections, navigation, shipping,
-                payments and store configuration.
-              </p>
-            </article>
+            <p data-i18n="expertise.architecture.description">
+              Product structures, collections, navigation, shipping, payments
+              and store configuration.
+            </p>
 
-            <article class="expertise-card reveal-up">
-              <span>04</span>
+          </article>
 
-              <h3>Conversion-focused UX</h3>
+          <article class="expertise-card reveal-up">
 
-              <p>
-                Responsive and user-focused shopping journeys designed
-                for product discovery and conversion.
-              </p>
-            </article>
-          </div>
+            <span>04</span>
+
+            <h3 data-i18n="expertise.ux.title">
+              Conversion-focused UX
+            </h3>
+
+            <p data-i18n="expertise.ux.description">
+              Responsive and user-focused shopping journeys designed for
+              product discovery and conversion.
+            </p>
+
+          </article>
+
         </div>
+
       </div>
+
     </section>
 
+    <!-- SKILLS -->
+
     <section class="section skills" id="skills">
+
       <div class="container">
-        <span class="section-label">
-          SKILLS &amp; EXPERTISE
+
+        <span
+          class="section-label"
+          data-i18n="skills.label"
+        >
+          SKILLS & EXPERTISE
         </span>
 
         <div class="skills-heading">
-          <div>
-            <h2>Technologies I work with</h2>
 
-            <p>
-              A combination of frontend, e-commerce and modern
-              engineering practices.
-            </p>
-          </div>
+          <h2 data-i18n="skills.title">
+            Technologies I work with
+          </h2>
+
+          <p data-i18n="skills.description">
+            A combination of frontend, e-commerce and modern engineering practices.
+          </p>
+
         </div>
 
         <div class="skill-highlight-grid">
+
           <article class="skill-card reveal-up">
-            <div class="skill-logo angular">
-              A
-            </div>
+
+            <div class="skill-logo angular">A</div>
 
             <h3>Angular</h3>
 
-            <span>Core specialization</span>
+            <span data-i18n="skills.core">
+              Core specialization
+            </span>
+
           </article>
 
           <article class="skill-card reveal-up">
-            <div class="skill-logo typescript">
-              TS
-            </div>
+
+            <div class="skill-logo typescript">TS</div>
 
             <h3>TypeScript</h3>
 
-            <span>Frontend engineering</span>
+            <span data-i18n="skills.frontendEngineering">
+              Frontend engineering
+            </span>
+
           </article>
 
           <article class="skill-card reveal-up">
-            <div class="skill-logo javascript">
-              JS
-            </div>
+
+            <div class="skill-logo javascript">JS</div>
 
             <h3>JavaScript</h3>
 
-            <span>Modern web</span>
+            <span data-i18n="skills.modernWeb">
+              Modern web
+            </span>
+
           </article>
 
           <article class="skill-card reveal-up">
-            <div class="skill-logo rxjs">
-              R
-            </div>
+
+            <div class="skill-logo rxjs">R</div>
 
             <h3>RxJS</h3>
 
-            <span>Reactive programming</span>
+            <span data-i18n="skills.reactive">
+              Reactive programming
+            </span>
+
           </article>
 
           <article class="skill-card reveal-up">
-            <div class="skill-logo shopify">
-              S
-            </div>
+
+            <div class="skill-logo shopify">S</div>
 
             <h3>Shopify</h3>
 
-            <span>E-commerce</span>
+            <span data-i18n="skills.ecommerce">
+              E-commerce
+            </span>
+
           </article>
 
           <article class="skill-card reveal-up">
-            <div class="skill-logo liquid">
-              L
-            </div>
+
+            <div class="skill-logo liquid">L</div>
 
             <h3>Liquid</h3>
 
-            <span>Shopify development</span>
+            <span data-i18n="skills.shopifyDev">
+              Shopify development
+            </span>
+
           </article>
+
         </div>
 
         <div class="skills-categories">
+
           <article class="skills-category reveal-up">
-            <h3>Modern Angular</h3>
+
+            <h3 data-i18n="skills.modernAngular">
+              Modern Angular
+            </h3>
 
             <div class="skill-pills">
               <span>Signals</span>
@@ -874,10 +1213,14 @@
               <span>Reactive Programming</span>
               <span>Reusable Components</span>
             </div>
+
           </article>
 
           <article class="skills-category reveal-up">
-            <h3>Architecture &amp; Engineering</h3>
+
+            <h3 data-i18n="skills.architecture">
+              Architecture & Engineering
+            </h3>
 
             <div class="skill-pills">
               <span>Clean Code</span>
@@ -889,10 +1232,14 @@
               <span>GitHub</span>
               <span>GitLab</span>
             </div>
+
           </article>
 
           <article class="skills-category reveal-up">
-            <h3>UI &amp; Styling</h3>
+
+            <h3 data-i18n="skills.ui">
+              UI & Styling
+            </h3>
 
             <div class="skill-pills">
               <span>HTML5</span>
@@ -902,299 +1249,456 @@
               <span>Bootstrap</span>
               <span>Responsive UI</span>
             </div>
+
           </article>
 
           <article class="skills-category reveal-up">
-            <h3>Additional</h3>
+
+            <h3 data-i18n="skills.additional">
+              Additional
+            </h3>
 
             <div class="skill-pills">
               <span>Vue.js</span>
               <span>C#</span>
               <span>LESS</span>
             </div>
+
           </article>
+
         </div>
+
       </div>
+
     </section>
+
+    <!-- EXPERIENCE -->
 
     <section class="section experience" id="experience">
-      <div class="container">
-        <div class="experience-layout">
-          <div class="experience-intro reveal-left">
-            <span class="section-label">EXPERIENCE</span>
 
-            <h2>My Professional Journey</h2>
+      <div class="container experience-layout">
 
-            <p>
-              Six years of commercial experience building and
-              supporting production-ready digital products.
-            </p>
-          </div>
+        <div class="experience-intro reveal-left">
 
-          <div class="timeline">
-            <article class="timeline-item reveal-right">
-              <div class="timeline-dot"></div>
+          <span
+            class="section-label"
+            data-i18n="experience.label"
+          >
+            EXPERIENCE
+          </span>
 
-              <div class="timeline-card">
-                <div class="timeline-heading">
-                  <div>
-                    <h3>
-                      IDT — Intelligent Digital Technologies
-                    </h3>
+          <h2 data-i18n="experience.title">
+            My Professional Journey
+          </h2>
 
-                    <span>Frontend Developer</span>
-                  </div>
+          <p data-i18n="experience.description">
+            Six years of commercial experience building and supporting
+            production-ready digital products.
+          </p>
 
-                  <time>Feb 2025 – Present</time>
-                </div>
-
-                <p>
-                  Plan, develop, launch and support complex web and
-                  mobile applications from scratch using Angular,
-                  TypeScript, RxJS and modern Angular architecture.
-                </p>
-              </div>
-            </article>
-
-            <article class="timeline-item reveal-right">
-              <div class="timeline-dot"></div>
-
-              <div class="timeline-card">
-                <div class="timeline-heading">
-                  <div>
-                    <h3>Inline LLC</h3>
-                    <span>Frontend Web Developer</span>
-                  </div>
-
-                  <time>Sep 2022 – Feb 2025</time>
-                </div>
-
-                <p>
-                  Developed complex production applications with
-                  Angular, TypeScript and RxJS across media,
-                  hospitality, retail, healthcare and IoT domains.
-                </p>
-              </div>
-            </article>
-
-            <article class="timeline-item reveal-right">
-              <div class="timeline-dot"></div>
-
-              <div class="timeline-card">
-                <div class="timeline-heading">
-                  <div>
-                    <h3>REXSoft</h3>
-                    <span>Frontend Developer</span>
-                  </div>
-
-                  <time>Jan 2024 – Feb 2025</time>
-                </div>
-
-                <p>
-                  Built modern web applications, reusable UI
-                  components, responsive interfaces and API-driven
-                  production features.
-                </p>
-              </div>
-            </article>
-
-            <article class="timeline-item reveal-right">
-              <div class="timeline-dot"></div>
-
-              <div class="timeline-card">
-                <div class="timeline-heading">
-                  <div>
-                    <h3>Digital Threads</h3>
-                    <span>Frontend Developer — Vue.js</span>
-                  </div>
-
-                  <time>Jul 2022 – Sep 2022</time>
-                </div>
-
-                <p>
-                  Developed responsive frontend functionality and
-                  reusable components using Vue.js.
-                </p>
-              </div>
-            </article>
-
-            <article class="timeline-item reveal-right">
-              <div class="timeline-dot"></div>
-
-              <div class="timeline-card">
-                <div class="timeline-heading">
-                  <div>
-                    <h3>Codeex</h3>
-                    <span>Middle Angular Developer</span>
-                  </div>
-
-                  <time>Mar 2022 – Jul 2022</time>
-                </div>
-
-                <p>
-                  Built scalable Angular functionality, reusable
-                  components, REST API integrations and complex
-                  workflows.
-                </p>
-              </div>
-            </article>
-
-            <article class="timeline-item reveal-right">
-              <div class="timeline-dot"></div>
-
-              <div class="timeline-card">
-                <div class="timeline-heading">
-                  <div>
-                    <h3>ArmBoldMind</h3>
-                    <span>Frontend Web Developer</span>
-                  </div>
-
-                  <time>Dec 2020 – Mar 2022</time>
-                </div>
-
-                <p>
-                  Developed responsive applications, reusable UI and
-                  backend service integrations.
-                </p>
-              </div>
-            </article>
-          </div>
         </div>
+
+        <div class="timeline">
+
+          <article class="timeline-item reveal-right">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+              <div class="timeline-heading">
+
+                <div>
+
+                  <h3>
+                    IDT — Intelligent Digital Technologies
+                  </h3>
+
+                  <span data-i18n="experience.frontendDeveloper">
+                    Frontend Developer
+                  </span>
+
+                </div>
+
+                <time>
+                  Feb 2025 – Present
+                </time>
+
+              </div>
+
+              <p data-i18n="experience.idt">
+                Plan, develop, launch and support complex web and mobile
+                applications from scratch using Angular, TypeScript, RxJS and
+                modern Angular architecture.
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="timeline-item reveal-right">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+              <div class="timeline-heading">
+
+                <div>
+
+                  <h3>Inline LLC</h3>
+
+                  <span data-i18n="experience.frontendWebDeveloper">
+                    Frontend Web Developer
+                  </span>
+
+                </div>
+
+                <time>
+                  Sep 2022 – Feb 2025
+                </time>
+
+              </div>
+
+              <p data-i18n="experience.inline">
+                Developed complex production applications with Angular,
+                TypeScript and RxJS across media, hospitality, retail,
+                healthcare and IoT domains.
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="timeline-item reveal-right">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+              <div class="timeline-heading">
+
+                <div>
+
+                  <h3>REXSoft</h3>
+
+                  <span data-i18n="experience.frontendDeveloper">
+                    Frontend Developer
+                  </span>
+
+                </div>
+
+                <time>
+                  Jan 2024 – Feb 2025
+                </time>
+
+              </div>
+
+              <p data-i18n="experience.rexsoft">
+                Built modern web applications, reusable UI components,
+                responsive interfaces and API-driven production features.
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="timeline-item reveal-right">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+              <div class="timeline-heading">
+
+                <div>
+
+                  <h3>Digital Threads</h3>
+
+                  <span data-i18n="experience.vueDeveloper">
+                    Frontend Developer — Vue.js
+                  </span>
+
+                </div>
+
+                <time>
+                  Jul 2022 – Sep 2022
+                </time>
+
+              </div>
+
+              <p data-i18n="experience.digitalThreads">
+                Developed responsive frontend functionality and reusable
+                components using Vue.js.
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="timeline-item reveal-right">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+              <div class="timeline-heading">
+
+                <div>
+
+                  <h3>Codeex</h3>
+
+                  <span data-i18n="experience.middleAngular">
+                    Middle Angular Developer
+                  </span>
+
+                </div>
+
+                <time>
+                  Mar 2022 – Jul 2022
+                </time>
+
+              </div>
+
+              <p data-i18n="experience.codeex">
+                Built scalable Angular functionality, reusable components,
+                REST API integrations and complex workflows.
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="timeline-item reveal-right">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+              <div class="timeline-heading">
+
+                <div>
+
+                  <h3>ArmBoldMind</h3>
+
+                  <span data-i18n="experience.frontendWebDeveloper">
+                    Frontend Web Developer
+                  </span>
+
+                </div>
+
+                <time>
+                  Dec 2020 – Mar 2022
+                </time>
+
+              </div>
+
+              <p data-i18n="experience.armboldmind">
+                Developed responsive applications, reusable UI and backend
+                service integrations.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
       </div>
+
     </section>
 
+    <!-- CONFIDENTIAL -->
+
     <section class="section confidential-work">
+
       <div class="container">
+
         <div class="section-header">
+
           <div>
-            <span class="section-label">
+
+            <span
+              class="section-label"
+              data-i18n="confidential.label"
+            >
               ADDITIONAL COMMERCIAL WORK
             </span>
 
-            <h2>Confidential projects</h2>
+            <h2 data-i18n="confidential.title">
+              Confidential projects
+            </h2>
 
-            <p class="section-description">
+            <p
+              class="section-description"
+              data-i18n="confidential.description"
+            >
               Some commercial products are protected by confidentiality
-              agreements, so client names and screenshots cannot be
-              shared publicly.
+              agreements, so client names and screenshots cannot be shared publicly.
             </p>
+
           </div>
+
         </div>
 
         <div class="confidential-grid">
+
           <article class="confidential-card reveal-up">
+
             <span>01</span>
 
-            <h3>Staff Management System</h3>
+            <h3 data-i18n="confidential.staff.title">
+              Staff Management System
+            </h3>
 
-            <p>
+            <p data-i18n="confidential.staff.description">
               Comprehensive staff management platform for employee
               administration and organizational workflows.
             </p>
 
-            <div class="skill-pills">
-              <span>Admin Dashboard</span>
-              <span>Complex Forms</span>
-              <span>Business Logic</span>
-              <span>API Integration</span>
-            </div>
           </article>
 
           <article class="confidential-card reveal-up">
+
             <span>02</span>
 
-            <h3>Land Surveying Administration Platform</h3>
+            <h3 data-i18n="confidential.land.title">
+              Land Surveying Administration Platform
+            </h3>
 
-            <p>
-              Specialized control platform for managing surveying
-              workflows, operational data and administrative processes.
+            <p data-i18n="confidential.land.description">
+              Specialized control platform for managing surveying workflows,
+              operational data and administrative processes.
             </p>
 
-            <div class="skill-pills">
-              <span>Admin Panel</span>
-              <span>Workflows</span>
-              <span>Data Management</span>
-            </div>
           </article>
 
           <article class="confidential-card reveal-up">
+
             <span>03</span>
 
-            <h3>Wedding Planning Platform</h3>
+            <h3 data-i18n="confidential.wedding.title">
+              Wedding Planning Platform
+            </h3>
 
-            <p>
+            <p data-i18n="confidential.wedding.description">
               Modern digital product designed to organize and simplify
               different aspects of wedding planning.
             </p>
 
-            <div class="skill-pills">
-              <span>Event Technology</span>
-              <span>Responsive UI</span>
-              <span>Interactive Experience</span>
-            </div>
           </article>
+
         </div>
+
       </div>
+
     </section>
 
-    <section class="section education">
-      <div class="container education-grid">
-        <article class="education-card reveal-left">
-          <span class="section-label">EDUCATION</span>
+    <!-- EDUCATION -->
 
-          <h2>
+    <section class="section education">
+
+      <div class="container education-grid">
+
+        <article class="education-card reveal-left">
+
+          <span
+            class="section-label"
+            data-i18n="education.label"
+          >
+            EDUCATION
+          </span>
+
+          <h2 data-i18n="education.university">
             National Polytechnic University of Armenia
           </h2>
 
-          <p>Computer Science</p>
+          <p data-i18n="education.degree">
+            Computer Science
+          </p>
 
-          <span>2017 – 2021</span>
+          <span>
+            2017 – 2021
+          </span>
+
         </article>
 
         <article class="education-card reveal-right">
-          <span class="section-label">LANGUAGES</span>
+
+          <span
+            class="section-label"
+            data-i18n="languages.label"
+          >
+            LANGUAGES
+          </span>
 
           <div class="language-list">
+
             <div>
-              <strong>Armenian</strong>
-              <span>Native</span>
+              <strong data-i18n="languages.armenian">
+                Armenian
+              </strong>
+
+              <span data-i18n="languages.native">
+                Native
+              </span>
             </div>
 
             <div>
-              <strong>English</strong>
-              <span>B2</span>
+              <strong data-i18n="languages.english">
+                English
+              </strong>
+
+              <span>
+                B2
+              </span>
             </div>
 
             <div>
-              <strong>Russian</strong>
-              <span>A1</span>
+              <strong data-i18n="languages.russian">
+                Russian
+              </strong>
+
+              <span>
+                A1
+              </span>
             </div>
+
           </div>
+
         </article>
+
       </div>
+
     </section>
 
+    <!-- CONTACT -->
+
     <section class="section contact" id="contact">
+
       <div class="container contact-grid">
+
         <div class="contact-intro reveal-left">
-          <span class="section-label">
+
+          <span
+            class="section-label"
+            data-i18n="contact.label"
+          >
             LET'S WORK TOGETHER
           </span>
 
-          <h2>
-            Have a project in mind?
-            <br />
-            Let's build something great.
+          <h2 data-i18n="contact.title">
+            Have a project in mind? Let's build something great.
           </h2>
 
-          <p>
-            Whether you're looking for an experienced frontend
-            developer, need help with an Angular application, or want
-            to build a high-quality Shopify store, I'd be happy to hear
-            about your project.
+          <p data-i18n="contact.description">
+            Whether you're looking for an experienced frontend developer,
+            need help with an Angular application, or want to build a
+            high-quality Shopify store, I'd be happy to hear about your project.
           </p>
 
           <div class="contact-links">
+
             <a href="mailto:margarsusanna5@gmail.com">
               <span>✉</span>
               margarsusanna5@gmail.com
@@ -1222,105 +1726,147 @@
               <span>GH</span>
               github.com/SusannaMargaryan20
             </a>
+
           </div>
+
         </div>
 
-        <form
-          class="contact-form reveal-right"
-          id="contactForm"
-        >
-          <div class="form-row">
-            <label>
-              Name
+        <div class="contact-actions-panel reveal-right">
 
-              <input
-                type="text"
-                name="name"
-                required
-                placeholder="Your name"
-              />
-            </label>
+          <span
+            class="section-label"
+            data-i18n="contact.getInTouch"
+          >
+            GET IN TOUCH
+          </span>
 
-            <label>
-              Email
+          <h3 data-i18n="contact.panelTitle">
+            Let's create something great together.
+          </h3>
 
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="you@example.com"
-              />
-            </label>
+          <p data-i18n="contact.panelDescription">
+            I'm open to remote full-time opportunities, freelance frontend
+            projects, Angular development and Shopify / e-commerce collaborations.
+          </p>
+
+          <div class="contact-action-buttons">
+
+            <a
+              href="mailto:margarsusanna5@gmail.com"
+              class="btn btn-primary"
+            >
+              <span>✉</span>
+
+              <span data-i18n="contact.emailMe">
+                Email Me
+              </span>
+            </a>
+
+            <a
+              href="./assets/cv/Susanna_MargaryanCV.pdf"
+              class="btn btn-outline"
+              download
+            >
+              <span>↓</span>
+
+              <span data-i18n="common.downloadCv">
+                Download CV
+              </span>
+            </a>
+
           </div>
 
-          <label>
-            Project Type
+          <div class="availability-card">
 
-            <select name="projectType">
-              <option>Full-time Opportunity</option>
-              <option>Frontend Development</option>
-              <option>Angular Development</option>
-              <option>Shopify / E-commerce</option>
-              <option>Freelance Project</option>
-              <option>Other</option>
-            </select>
-          </label>
+            <span class="availability-dot"></span>
 
-          <label>
-            Message
+            <div>
 
-            <textarea
-              name="message"
-              rows="6"
-              required
-              placeholder="Tell me about your project..."
-            ></textarea>
-          </label>
+              <strong data-i18n="contact.available">
+                Available for new opportunities
+              </strong>
 
-          <button
-            type="submit"
-            class="btn btn-primary"
-          >
-            Send Message
-            <span>→</span>
-          </button>
+              <p data-i18n="contact.types">
+                Remote full-time · Freelance · Shopify / E-commerce
+              </p>
 
-          <p class="form-status" id="formStatus"></p>
-        </form>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
+
     </section>
+
   </main>
 
+  <!-- FOOTER -->
+
   <footer class="footer">
+
     <div class="container footer-grid">
+
       <div class="footer-brand">
+
         <strong>SM</strong>
 
         <span>
           Susanna Margaryan
         </span>
 
-        <span class="footer-divider">|</span>
+        <span class="footer-divider">
+          |
+        </span>
 
-        <span>Frontend Developer</span>
+        <span data-i18n="footer.role">
+          Frontend Developer
+        </span>
+
       </div>
 
       <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+
+        <a href="#about" data-i18n="nav.about">
+          About
+        </a>
+
+        <a href="#projects" data-i18n="nav.projects">
+          Projects
+        </a>
+
+        <a href="#skills" data-i18n="nav.skills">
+          Skills
+        </a>
+
+        <a href="#contact" data-i18n="nav.contact">
+          Contact
+        </a>
+
       </nav>
 
       <span>
-        © <span id="currentYear"></span>
-        Susanna Margaryan. All rights reserved.
+        ©
+        <span id="currentYear"></span>
+        Susanna Margaryan.
+        <span data-i18n="footer.rights">
+          All rights reserved.
+        </span>
       </span>
+
     </div>
+
   </footer>
 
+  <!-- CASE STUDY MODAL -->
+
   <div class="modal" id="caseStudyModal">
-    <div class="modal-backdrop" data-close-modal></div>
+
+    <div
+      class="modal-backdrop"
+      data-close-modal
+    ></div>
 
     <div
       class="modal-content"
@@ -1328,6 +1874,7 @@
       aria-modal="true"
       aria-labelledby="modalTitle"
     >
+
       <button
         class="modal-close"
         type="button"
@@ -1358,12 +1905,18 @@
         class="btn btn-primary"
         id="modalLink"
       >
-        Visit Website
+        <span data-i18n="common.visitWebsite">
+          Visit Website
+        </span>
+
         <span>↗</span>
       </a>
+
     </div>
+
   </div>
 
   <script src="./js/main.js"></script>
+
 </body>
 </html>
