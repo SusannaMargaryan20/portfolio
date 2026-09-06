@@ -1,3 +1,9 @@
+document.documentElement.classList.remove("no-js");
+
+/* =========================================
+   ELEMENTS
+========================================= */
+
 const body =
   document.body;
 
@@ -19,14 +25,30 @@ const languageButtons =
 const currentYear =
   document.getElementById("currentYear");
 
-/* =========================
+const modal =
+  document.getElementById("caseStudyModal");
+
+const modalTitle =
+  document.getElementById("modalTitle");
+
+const modalCategory =
+  document.getElementById("modalCategory");
+
+const modalDescription =
+  document.getElementById("modalDescription");
+
+const modalFeatures =
+  document.getElementById("modalFeatures");
+
+const modalLink =
+  document.getElementById("modalLink");
+
+/* =========================================
    TRANSLATIONS
-========================= */
+========================================= */
 
 const translations = {
-
   en: {
-
     nav: {
       about: "About",
       experience: "Experience",
@@ -45,66 +67,48 @@ const translations = {
     },
 
     hero: {
-      available:
-        "Available for new opportunities",
+      available: "Available for new opportunities",
 
-      title1:
-        "Building scalable applications",
+      title1: "Building scalable applications",
 
-      and:
-        "&",
+      and: "&",
 
-      title2:
-        "high-converting digital experiences.",
+      title2: "high-converting digital experiences.",
 
       description:
         "I'm Susanna Margaryan, a Frontend Developer with 6 years of commercial experience specializing in Angular, modern frontend architecture, and e-commerce development.",
 
-      angular:
-        "Angular Specialist",
+      angular: "Angular Specialist",
 
-      experience:
-        "6 Years Experience",
+      experience: "6 Years Experience",
 
-      shopify:
-        "Shopify & E-commerce",
+      shopify: "Shopify & E-commerce",
 
-      frontendDeveloper:
-        "Frontend Developer",
+      frontendDeveloper: "Frontend Developer",
 
-      turning:
-        "TURNING",
+      turning: "TURNING",
 
-      ideas:
-        "IDEAS INTO",
+      ideas: "IDEAS INTO",
 
-      products:
-        "REAL PRODUCTS",
+      products: "REAL PRODUCTS",
     },
 
     stats: {
-      years:
-        "Years of Experience",
+      years: "Years of Experience",
 
-      projects:
-        "Commercial Projects",
+      projects: "Commercial Projects",
 
-      multiple:
-        "Multiple",
+      multiple: "Multiple",
 
-      domains:
-        "Business Domains",
+      domains: "Business Domains",
 
-      endToEnd:
-        "End-to-End",
+      endToEnd: "End-to-End",
 
-      productDevelopment:
-        "Product Development",
+      productDevelopment: "Product Development",
     },
 
     about: {
-      label:
-        "ABOUT ME",
+      label: "ABOUT ME",
 
       title:
         "Frontend Developer with a passion for creating meaningful products.",
@@ -115,64 +119,49 @@ const translations = {
       paragraph2:
         "Over the years, I've worked across e-commerce, media, hospitality, healthcare, IoT and enterprise systems.",
 
-      more:
-        "More About Me",
+      more: "More About Me",
 
-      based:
-        "Based in",
+      based: "Based in",
 
-      armenia:
-        "Armenia",
+      armenia: "Armenia",
 
-      commercial:
-        "Commercial",
+      commercial: "Commercial",
 
-      sixYears:
-        "6 Years Experience",
+      sixYears: "6 Years Experience",
 
-      frontend:
-        "Frontend",
+      frontend: "Frontend",
 
-      engineering:
-        "Engineering",
+      engineering: "Engineering",
 
-      ecommerce:
-        "E-commerce",
+      ecommerce: "E-commerce",
 
-      development:
-        "Development",
+      development: "Development",
 
       quote:
         "“I believe great software is a combination of clean code, thoughtful design and a deep understanding of the people who use it.”",
     },
 
     projects: {
+      label: "FEATURED PROJECTS",
 
-      label:
-        "FEATURED PROJECTS",
-
-      title:
-        "Selected commercial work",
+      title: "Selected commercial work",
 
       businessCode: {
-        category:
-          "News & Media Platform",
+        category: "News & Media Platform",
 
         description:
           "A modern news and media platform designed to make discovering and exploring large volumes of content fast and intuitive.",
       },
 
       city: {
-        category:
-          "E-commerce / Retail",
+        category: "E-commerce / Retail",
 
         description:
           "A large-scale grocery and retail platform with an extensive catalog, structured navigation and modern shopping experience.",
       },
 
       alpha: {
-        category:
-          "Healthcare / E-commerce",
+        category: "Healthcare / E-commerce",
 
         description:
           "An online pharmacy and healthcare e-commerce platform providing convenient access to health, beauty and wellness products.",
@@ -203,87 +192,56 @@ const translations = {
       },
 
       tags: {
-        news:
-          "News",
-
-        search:
-          "Search",
-
-        discovery:
-          "Content Discovery",
-
-        ecommerce:
-          "E-commerce",
-
-        catalog:
-          "Product Catalog",
-
-        promotions:
-          "Promotions",
-
-        healthcare:
-          "Healthcare",
-
-        reservations:
-          "Reservations",
-
-        guestManagement:
-          "Guest Management",
-
-        dashboards:
-          "Dashboards",
-
-        healthMonitoring:
-          "Health Monitoring",
-
-        themeDevelopment:
-          "Theme Development",
+        news: "News",
+        search: "Search",
+        discovery: "Content Discovery",
+        ecommerce: "E-commerce",
+        catalog: "Product Catalog",
+        promotions: "Promotions",
+        healthcare: "Healthcare",
+        reservations: "Reservations",
+        guestManagement: "Guest Management",
+        dashboards: "Dashboards",
+        healthMonitoring: "Health Monitoring",
+        themeDevelopment: "Theme Development",
       },
     },
 
     expertise: {
-      label:
-        "SHOPIFY & E-COMMERCE",
+      label: "SHOPIFY & E-COMMERCE",
 
-      title1:
-        "Building complete",
+      title1: "Building complete",
 
-      title2:
-        "e-commerce experiences.",
+      title2: "e-commerce experiences.",
 
       description:
         "Beyond enterprise frontend development, I build complete Shopify experiences — from store architecture and theme customization to custom Liquid development, product structures, integrations and conversion-focused storefronts.",
 
-      cta:
-        "Start a Shopify Project",
+      cta: "Start a Shopify Project",
 
       theme: {
-        title:
-          "Theme Development",
+        title: "Theme Development",
 
         description:
           "Customizing and extending Shopify themes to create polished branded storefronts.",
       },
 
       liquid: {
-        title:
-          "Liquid Development",
+        title: "Liquid Development",
 
         description:
           "Custom Liquid sections, components, product templates and reusable storefront functionality.",
       },
 
       architecture: {
-        title:
-          "Store Architecture",
+        title: "Store Architecture",
 
         description:
           "Product structures, collections, navigation, shipping, payments and store configuration.",
       },
 
       ux: {
-        title:
-          "Conversion-focused UX",
+        title: "Conversion-focused UX",
 
         description:
           "Responsive and user-focused shopping journeys designed for product discovery and conversion.",
@@ -291,52 +249,40 @@ const translations = {
     },
 
     skills: {
-      label:
-        "SKILLS & EXPERTISE",
+      label: "SKILLS & EXPERTISE",
 
-      title:
-        "Technologies I work with",
+      title: "Technologies I work with",
 
       description:
         "A combination of frontend, e-commerce and modern engineering practices.",
 
-      core:
-        "Core specialization",
+      core: "Core specialization",
 
       frontendEngineering:
         "Frontend engineering",
 
-      modernWeb:
-        "Modern web",
+      modernWeb: "Modern web",
 
-      reactive:
-        "Reactive programming",
+      reactive: "Reactive programming",
 
-      ecommerce:
-        "E-commerce",
+      ecommerce: "E-commerce",
 
-      shopifyDev:
-        "Shopify development",
+      shopifyDev: "Shopify development",
 
-      modernAngular:
-        "Modern Angular",
+      modernAngular: "Modern Angular",
 
       architecture:
         "Architecture & Engineering",
 
-      ui:
-        "UI & Styling",
+      ui: "UI & Styling",
 
-      additional:
-        "Additional",
+      additional: "Additional",
     },
 
     experience: {
-      label:
-        "EXPERIENCE",
+      label: "EXPERIENCE",
 
-      title:
-        "My Professional Journey",
+      title: "My Professional Journey",
 
       description:
         "Six years of commercial experience building and supporting production-ready digital products.",
@@ -408,31 +354,24 @@ const translations = {
     },
 
     education: {
-      label:
-        "EDUCATION",
+      label: "EDUCATION",
 
       university:
         "National Polytechnic University of Armenia",
 
-      degree:
-        "Computer Science",
+      degree: "Computer Science",
     },
 
     languages: {
-      label:
-        "LANGUAGES",
+      label: "LANGUAGES",
 
-      armenian:
-        "Armenian",
+      armenian: "Armenian",
 
-      english:
-        "English",
+      english: "English",
 
-      russian:
-        "Russian",
+      russian: "Russian",
 
-      native:
-        "Native",
+      native: "Native",
     },
 
     contact: {
@@ -454,8 +393,7 @@ const translations = {
       panelDescription:
         "I'm open to remote full-time opportunities, freelance frontend projects, Angular development and Shopify / e-commerce collaborations.",
 
-      emailMe:
-        "Email Me",
+      emailMe: "Email Me",
 
       available:
         "Available for new opportunities",
@@ -465,29 +403,21 @@ const translations = {
     },
 
     footer: {
-      role:
-        "Frontend Developer",
+      role: "Frontend Developer",
 
       rights:
         "All rights reserved.",
     },
   },
 
-  /* =========================
-     ARMENIAN
-  ========================= */
-
   hy: {
-
     nav: {
-      about:
-        "Իմ մասին",
+      about: "Իմ մասին",
 
       experience:
-        "Փորձ",
+        "Աշխատանքային փորձ",
 
-      projects:
-        "Նախագծեր",
+      projects: "Նախագծեր",
 
       expertise:
         "Մասնագիտացում",
@@ -495,8 +425,7 @@ const translations = {
       skills:
         "Հմտություններ",
 
-      contact:
-        "Կապ",
+      contact: "Կապ",
     },
 
     common: {
@@ -523,14 +452,13 @@ const translations = {
       title1:
         "Ստեղծում եմ մասշտաբավորվող հավելվածներ",
 
-      and:
-        "և",
+      and: "և",
 
       title2:
         "արդյունավետ թվային փորձառություններ։",
 
       description:
-        "Ես Սուսաննա Մարգարյանն եմ՝ Frontend Developer՝ 6 տարվա առևտրային փորձով։ Իմ հիմնական մասնագիտացումը Angular-ն է, ժամանակակից frontend ճարտարապետությունը և e-commerce լուծումների մշակումը։",
+        "Ես Սուսաննա Մարգարյանն եմ՝ Frontend Developer՝ 6 տարվա առևտրային փորձով։ Իմ հիմնական մասնագիտացումը Angular-ն է, ժամանակակից frontend architecture-ը և e-commerce լուծումների մշակումը։",
 
       angular:
         "Angular մասնագետ",
@@ -579,10 +507,10 @@ const translations = {
         "ԻՄ ՄԱՍԻՆ",
 
       title:
-        "Frontend Developer՝ հետաքրքրված բարդ և արժեքավոր թվային պրոդուկտների ստեղծմամբ։",
+        "Frontend Developer՝ բարդ և արժեքավոր թվային պրոդուկտներ ստեղծելու հետաքրքրությամբ։",
 
       paragraph1:
-        "Սիրում եմ լուծել բարդ խնդիրներ, գրել մաքուր և պահպանելի կոդ, ստեղծել ինտուիտիվ ինտերֆեյսներ և գաղափարները հասցնել իրական արտադրական պրոդուկտի։",
+        "Սիրում եմ լուծել բարդ խնդիրներ, գրել մաքուր և պահպանելի կոդ, ստեղծել ինտուիտիվ ինտերֆեյսներ և գաղափարները հասցնել production-ready պրոդուկտի։",
 
       paragraph2:
         "Իմ մասնագիտական փորձի ընթացքում աշխատել եմ e-commerce, media, hospitality, healthcare, IoT և enterprise համակարգերի վրա։",
@@ -615,11 +543,10 @@ const translations = {
         "Development",
 
       quote:
-        "«Ինձ համար լավ ծրագրային ապահովումը մաքուր կոդի, մտածված դիզայնի և այն օգտագործող մարդկանց կարիքների խոր ընկալման համադրություն է»։",
+        "«Լավ ծրագրային ապահովումը մաքուր կոդի, մտածված դիզայնի և այն օգտագործող մարդկանց կարիքների խոր ընկալման համադրություն է»։",
     },
 
     projects: {
-
       label:
         "ԸՆՏՐՎԱԾ ՆԱԽԱԳԾԵՐ",
 
@@ -647,7 +574,7 @@ const translations = {
           "Healthcare / E-commerce",
 
         description:
-          "Առցանց դեղատան և առողջապահական e-commerce հարթակ՝ առողջության, գեղեցկության և խնամքի ապրանքների հարմար որոնմամբ ու գնումներով։",
+          "Առցանց դեղատան և healthcare e-commerce հարթակ՝ առողջության, գեղեցկության և խնամքի ապրանքների հարմար որոնման ու գնումների համար։",
       },
 
       rezx: {
@@ -663,7 +590,7 @@ const translations = {
           "PetTech / IoT / Առողջության մոնիթորինգ",
 
         description:
-          "Smart pet wearable համակարգին միացված admin interface՝ կենդանիների կառավարման, առողջական տվյալների և անասնաբուժական գործընթացների համար։",
+          "Smart pet wearable համակարգին միացված admin interface՝ կենդանիների կառավարման, առողջական տվյալների և veterinary workflow-ների համար։",
       },
 
       watch: {
@@ -671,7 +598,7 @@ const translations = {
           "Shopify / E-commerce",
 
         description:
-          "Premium բազմաբրենդ ժամացույցների e-commerce նախագիծ՝ կառուցված գեղեցիկ product discovery-ի, վստահության և conversion-focused UX-ի շուրջ։",
+          "Premium բազմաբրենդ ժամացույցների e-commerce նախագիծ՝ product discovery-ի, վստահության և conversion-focused UX-ի շուրջ։",
       },
 
       tags: {
@@ -758,7 +685,7 @@ const translations = {
           "Conversion-focused UX",
 
         description:
-          "Responsive և user-focused գնումների փորձառություն՝ product discovery-ն և conversion-ը բարելավելու համար։",
+          "Responsive և user-focused գնումների փորձառություններ՝ product discovery-ն և conversion-ը բարելավելու համար։",
       },
     },
 
@@ -826,7 +753,7 @@ const translations = {
         "Middle Angular Developer",
 
       idt:
-        "Պլանավորում, մշակում, գործարկում և սպասարկում եմ բարդ web և mobile հավելվածներ՝ ամբողջությամբ զրոյից՝ օգտագործելով Angular, TypeScript, RxJS և ժամանակակից Angular architecture։",
+        "Պլանավորում, մշակում, գործարկում և սպասարկում եմ բարդ web և mobile հավելվածներ՝ զրոյից՝ օգտագործելով Angular, TypeScript, RxJS և ժամանակակից Angular architecture։",
 
       inline:
         "Մշակել եմ production web հավելվածներ Angular, TypeScript և RxJS տեխնոլոգիաներով՝ media, hospitality, retail, healthcare և IoT ոլորտներում։",
@@ -867,7 +794,7 @@ const translations = {
           "Հողերի չափագրման կառավարման հարթակ",
 
         description:
-          "Մասնագիտացված admin և control system՝ հողերի չափագրման գործընթացների, օպերացիոն տվյալների և ադմինիստրատիվ workflow-ների կառավարման համար։",
+          "Մասնագիտացված admin և control system՝ հողերի չափագրման workflow-ների և օպերացիոն տվյալների կառավարման համար։",
       },
 
       wedding: {
@@ -946,486 +873,14 @@ const translations = {
   },
 };
 
-/* =========================
-   LANGUAGE
-========================= */
-
-const getNestedValue = (
-  object,
-  path
-) => {
-  return path
-    .split(".")
-    .reduce(
-      (value, key) =>
-        value?.[key],
-      object
-    );
-};
-
-const setLanguage = (
-  language
-) => {
-
-  const languageData =
-    translations[language];
-
-  if (!languageData) {
-    return;
-  }
-
-  document
-    .querySelectorAll(
-      "[data-i18n]"
-    )
-    .forEach(
-      (element) => {
-
-        const key =
-          element.dataset.i18n;
-
-        const value =
-          getNestedValue(
-            languageData,
-            key
-          );
-
-        if (
-          value !==
-          undefined
-        ) {
-          element.textContent =
-            value;
-        }
-      }
-    );
-
-  languageButtons.forEach(
-    (button) => {
-
-      button.classList.toggle(
-        "active",
-        button.dataset.lang ===
-          language
-      );
-
-    }
-  );
-
-  document.documentElement.lang =
-    language === "hy"
-      ? "hy"
-      : "en";
-
-  localStorage.setItem(
-    "portfolio-language",
-    language
-  );
-
-  updateModalLanguage();
-};
-
-languageButtons.forEach(
-  (button) => {
-
-    button.addEventListener(
-      "click",
-      () => {
-
-        setLanguage(
-          button.dataset.lang
-        );
-
-      }
-    );
-
-  }
-);
-
-const savedLanguage =
-  localStorage.getItem(
-    "portfolio-language"
-  );
-
-setLanguage(
-  savedLanguage || "en"
-);
-
-/* =========================
-   YEAR
-========================= */
-
-currentYear.textContent =
-  new Date().getFullYear();
-
-/* =========================
-   HEADER
-========================= */
-
-const updateHeader = () => {
-
-  header.classList.toggle(
-    "scrolled",
-    window.scrollY > 20
-  );
-
-};
-
-updateHeader();
-
-window.addEventListener(
-  "scroll",
-  updateHeader
-);
-
-/* =========================
-   THEME
-========================= */
-
-const savedTheme =
-  localStorage.getItem(
-    "portfolio-theme"
-  );
-
-if (
-  savedTheme === "light"
-) {
-  body.classList.add(
-    "light-theme"
-  );
-}
-
-themeToggle.addEventListener(
-  "click",
-  () => {
-
-    body.classList.toggle(
-      "light-theme"
-    );
-
-    const theme =
-      body.classList.contains(
-        "light-theme"
-      )
-        ? "light"
-        : "dark";
-
-    localStorage.setItem(
-      "portfolio-theme",
-      theme
-    );
-
-  }
-);
-
-/* =========================
-   MOBILE MENU
-========================= */
-
-const closeMobileMenu = () => {
-
-  mobileNav.classList.remove(
-    "open"
-  );
-
-  body.classList.remove(
-    "menu-open"
-  );
-
-  mobileMenuBtn.setAttribute(
-    "aria-expanded",
-    "false"
-  );
-
-};
-
-mobileMenuBtn.addEventListener(
-  "click",
-  () => {
-
-    const isOpen =
-      mobileNav.classList.toggle(
-        "open"
-      );
-
-    body.classList.toggle(
-      "menu-open",
-      isOpen
-    );
-
-    mobileMenuBtn.setAttribute(
-      "aria-expanded",
-      String(isOpen)
-    );
-
-  }
-);
-
-mobileNav
-  .querySelectorAll("a")
-  .forEach(
-    (link) => {
-
-      link.addEventListener(
-        "click",
-        closeMobileMenu
-      );
-
-    }
-  );
-
-/* =========================
-   REVEAL ANIMATIONS
-========================= */
-
-const revealElements =
-  document.querySelectorAll(
-    ".reveal-left, .reveal-right, .reveal-up"
-  );
-
-const revealObserver =
-  new IntersectionObserver(
-    (
-      entries,
-      observer
-    ) => {
-
-      entries.forEach(
-        (entry) => {
-
-          if (
-            entry.isIntersecting
-          ) {
-
-            entry.target
-              .classList
-              .add("visible");
-
-            observer.unobserve(
-              entry.target
-            );
-
-          }
-
-        }
-      );
-
-    },
-    {
-      threshold: 0.12,
-
-      rootMargin:
-        "0px 0px -40px 0px",
-    }
-  );
-
-revealElements.forEach(
-  (element) => {
-
-    revealObserver.observe(
-      element
-    );
-
-  }
-);
-
-/* =========================
-   COUNTERS
-========================= */
-
-const counters =
-  document.querySelectorAll(
-    ".counter"
-  );
-
-const counterSection =
-  document.querySelector(
-    ".stats-section"
-  );
-
-let countersStarted =
-  false;
-
-const animateCounter = (
-  counter
-) => {
-
-  const target =
-    Number(
-      counter.dataset.target
-    );
-
-  const duration =
-    1000;
-
-  const start =
-    performance.now();
-
-  const update = (
-    time
-  ) => {
-
-    const progress =
-      Math.min(
-        (time - start) /
-          duration,
-        1
-      );
-
-    const eased =
-      1 -
-      Math.pow(
-        1 - progress,
-        3
-      );
-
-    counter.textContent =
-      Math.floor(
-        target * eased
-      );
-
-    if (
-      progress < 1
-    ) {
-
-      requestAnimationFrame(
-        update
-      );
-
-    } else {
-
-      counter.textContent =
-        target;
-
-    }
-
-  };
-
-  requestAnimationFrame(
-    update
-  );
-
-};
-
-const counterObserver =
-  new IntersectionObserver(
-    (entries) => {
-
-      entries.forEach(
-        (entry) => {
-
-          if (
-            entry.isIntersecting &&
-            !countersStarted
-          ) {
-
-            countersStarted =
-              true;
-
-            counters.forEach(
-              animateCounter
-            );
-
-          }
-
-        }
-      );
-
-    },
-    {
-      threshold: 0.4,
-    }
-  );
-
-if (
-  counterSection
-) {
-
-  counterObserver.observe(
-    counterSection
-  );
-
-}
-
-/* =========================
-   ACTIVE NAVIGATION
-========================= */
-
-const sections =
-  document.querySelectorAll(
-    "main section[id]"
-  );
-
-const desktopLinks =
-  document.querySelectorAll(
-    ".desktop-nav a"
-  );
-
-const setActiveNav = () => {
-
-  let currentId = "";
-
-  sections.forEach(
-    (section) => {
-
-      const top =
-        section.offsetTop -
-        170;
-
-      const bottom =
-        top +
-        section.offsetHeight;
-
-      if (
-        window.scrollY >=
-          top &&
-        window.scrollY <
-          bottom
-      ) {
-
-        currentId =
-          section.id;
-
-      }
-
-    }
-  );
-
-  desktopLinks.forEach(
-    (link) => {
-
-      link.classList.toggle(
-        "active",
-        link.getAttribute(
-          "href"
-        ) ===
-          `#${currentId}`
-      );
-
-    }
-  );
-
-};
-
-window.addEventListener(
-  "scroll",
-  setActiveNav
-);
-
-setActiveNav();
-
-/* =========================
+/* =========================================
    PROJECT MODAL DATA
-========================= */
+========================================= */
 
 const projectData = {
-
   en: {
-
     "business-code": {
-
-      title:
-        "Business Code",
+      title: "Business Code",
 
       category:
         "News & Media Platform",
@@ -1446,9 +901,7 @@ const projectData = {
     },
 
     "yerevan-city": {
-
-      title:
-        "Yerevan City",
+      title: "Yerevan City",
 
       category:
         "Large-scale E-commerce / Retail",
@@ -1469,9 +922,7 @@ const projectData = {
     },
 
     alfapharm: {
-
-      title:
-        "AlfaPharm",
+      title: "AlfaPharm",
 
       category:
         "Healthcare / E-commerce",
@@ -1492,9 +943,7 @@ const projectData = {
     },
 
     rezx: {
-
-      title:
-        "RezX",
+      title: "RezX",
 
       category:
         "Restaurant Technology / CRM",
@@ -1515,9 +964,7 @@ const projectData = {
     },
 
     petpace: {
-
-      title:
-        "PetPace",
+      title: "PetPace",
 
       category:
         "PetTech / IoT / Health Monitoring",
@@ -1538,7 +985,6 @@ const projectData = {
     },
 
     "watch-gallery": {
-
       title:
         "WATCH GALLERY",
 
@@ -1562,11 +1008,8 @@ const projectData = {
   },
 
   hy: {
-
     "business-code": {
-
-      title:
-        "Business Code",
+      title: "Business Code",
 
       category:
         "Նորությունների և մեդիայի հարթակ",
@@ -1587,9 +1030,7 @@ const projectData = {
     },
 
     "yerevan-city": {
-
-      title:
-        "Yerevan City",
+      title: "Yerevan City",
 
       category:
         "Մեծածավալ E-commerce / Retail",
@@ -1610,15 +1051,13 @@ const projectData = {
     },
 
     alfapharm: {
-
-      title:
-        "AlfaPharm",
+      title: "AlfaPharm",
 
       category:
         "Healthcare / E-commerce",
 
       description:
-        "AlfaPharm-ը առցանց դեղատան և առողջապահական e-commerce հարթակ է՝ առողջության, գեղեցկության և խնամքի ապրանքների հարմար որոնման ու գնումների համար։",
+        "AlfaPharm-ը առցանց դեղատան և healthcare e-commerce հարթակ է՝ առողջության, գեղեցկության և խնամքի ապրանքների հարմար որոնման ու գնումների համար։",
 
       features: [
         "Առողջապահություն",
@@ -1633,9 +1072,7 @@ const projectData = {
     },
 
     rezx: {
-
-      title:
-        "RezX",
+      title: "RezX",
 
       category:
         "Ռեստորանային տեխնոլոգիա / CRM",
@@ -1656,9 +1093,7 @@ const projectData = {
     },
 
     petpace: {
-
-      title:
-        "PetPace",
+      title: "PetPace",
 
       category:
         "PetTech / IoT / Առողջության մոնիթորինգ",
@@ -1679,7 +1114,6 @@ const projectData = {
     },
 
     "watch-gallery": {
-
       title:
         "WATCH GALLERY",
 
@@ -1687,7 +1121,7 @@ const projectData = {
         "Shopify / E-commerce",
 
       description:
-        "Premium բազմաբրենդ ժամացույցների e-commerce նախագիծ՝ կառուցված product discovery-ի, վստահության, storytelling-ի և conversion-focused shopping experience-ի շուրջ։",
+        "Premium բազմաբրենդ ժամացույցների e-commerce նախագիծ՝ product discovery-ի, վստահության, storytelling-ի և conversion-focused shopping experience-ի շուրջ։",
 
       features: [
         "Shopify",
@@ -1703,42 +1137,29 @@ const projectData = {
   },
 };
 
-/* =========================
-   MODAL
-========================= */
-
-const modal =
-  document.getElementById(
-    "caseStudyModal"
-  );
-
-const modalTitle =
-  document.getElementById(
-    "modalTitle"
-  );
-
-const modalCategory =
-  document.getElementById(
-    "modalCategory"
-  );
-
-const modalDescription =
-  document.getElementById(
-    "modalDescription"
-  );
-
-const modalFeatures =
-  document.getElementById(
-    "modalFeatures"
-  );
-
-const modalLink =
-  document.getElementById(
-    "modalLink"
-  );
+/* =========================================
+   GLOBAL STATE
+========================================= */
 
 let currentProjectKey =
   null;
+
+/* =========================================
+   HELPERS
+========================================= */
+
+const getNestedValue = (
+  object,
+  path
+) => {
+  return path
+    .split(".")
+    .reduce(
+      (value, key) =>
+        value?.[key],
+      object
+    );
+};
 
 const getCurrentLanguage =
   () =>
@@ -1746,21 +1167,23 @@ const getCurrentLanguage =
       "portfolio-language"
     ) || "en";
 
+/* =========================================
+   MODAL RENDER
+   DECLARED BEFORE setLanguage
+========================================= */
+
 const renderModalProject = (
   projectKey
 ) => {
-
   const language =
     getCurrentLanguage();
 
   const project =
-    projectData[language][
-      projectKey
-    ];
+    projectData[
+      language
+    ]?.[projectKey];
 
-  if (
-    !project
-  ) {
+  if (!project) {
     return;
   }
 
@@ -1773,12 +1196,10 @@ const renderModalProject = (
   modalDescription.textContent =
     project.description;
 
-  modalFeatures.innerHTML =
-    "";
+  modalFeatures.innerHTML = "";
 
   project.features.forEach(
     (feature) => {
-
       const span =
         document.createElement(
           "span"
@@ -1790,51 +1211,470 @@ const renderModalProject = (
       modalFeatures.appendChild(
         span
       );
-
     }
   );
 
-  if (
-    project.url
-  ) {
-
+  if (project.url) {
     modalLink.href =
       project.url;
 
     modalLink.style.display =
       "inline-flex";
-
   } else {
-
     modalLink.style.display =
       "none";
-
   }
-
 };
 
 const updateModalLanguage =
   () => {
-
     if (
       currentProjectKey &&
       modal.classList.contains(
         "open"
       )
     ) {
-
       renderModalProject(
         currentProjectKey
       );
-
     }
-
   };
+
+/* =========================================
+   LANGUAGE
+========================================= */
+
+const setLanguage = (
+  language
+) => {
+  const languageData =
+    translations[language];
+
+  if (!languageData) {
+    return;
+  }
+
+  document
+    .querySelectorAll(
+      "[data-i18n]"
+    )
+    .forEach(
+      (element) => {
+        const key =
+          element.dataset.i18n;
+
+        const value =
+          getNestedValue(
+            languageData,
+            key
+          );
+
+        if (
+          value !==
+          undefined
+        ) {
+          element.textContent =
+            value;
+        }
+      }
+    );
+
+  languageButtons.forEach(
+    (button) => {
+      button.classList.toggle(
+        "active",
+        button.dataset.lang ===
+          language
+      );
+    }
+  );
+
+  document.documentElement.lang =
+    language;
+
+  localStorage.setItem(
+    "portfolio-language",
+    language
+  );
+
+  updateModalLanguage();
+};
+
+languageButtons.forEach(
+  (button) => {
+    button.addEventListener(
+      "click",
+      () => {
+        setLanguage(
+          button.dataset.lang
+        );
+      }
+    );
+  }
+);
+
+/* INITIAL LANGUAGE */
+
+const savedLanguage =
+  localStorage.getItem(
+    "portfolio-language"
+  );
+
+setLanguage(
+  savedLanguage || "en"
+);
+
+/* =========================================
+   YEAR
+========================================= */
+
+if (currentYear) {
+  currentYear.textContent =
+    new Date().getFullYear();
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+const updateHeader = () => {
+  header?.classList.toggle(
+    "scrolled",
+    window.scrollY > 20
+  );
+};
+
+updateHeader();
+
+window.addEventListener(
+  "scroll",
+  updateHeader,
+  {
+    passive: true,
+  }
+);
+
+/* =========================================
+   THEME
+========================================= */
+
+const savedTheme =
+  localStorage.getItem(
+    "portfolio-theme"
+  );
+
+if (
+  savedTheme === "light"
+) {
+  body.classList.add(
+    "light-theme"
+  );
+}
+
+themeToggle?.addEventListener(
+  "click",
+  () => {
+    body.classList.toggle(
+      "light-theme"
+    );
+
+    const theme =
+      body.classList.contains(
+        "light-theme"
+      )
+        ? "light"
+        : "dark";
+
+    localStorage.setItem(
+      "portfolio-theme",
+      theme
+    );
+  }
+);
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+const closeMobileMenu =
+  () => {
+    mobileNav?.classList.remove(
+      "open"
+    );
+
+    body.classList.remove(
+      "menu-open"
+    );
+
+    mobileMenuBtn?.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+  };
+
+mobileMenuBtn?.addEventListener(
+  "click",
+  () => {
+    const isOpen =
+      mobileNav.classList.toggle(
+        "open"
+      );
+
+    body.classList.toggle(
+      "menu-open",
+      isOpen
+    );
+
+    mobileMenuBtn.setAttribute(
+      "aria-expanded",
+      String(isOpen)
+    );
+  }
+);
+
+mobileNav
+  ?.querySelectorAll("a")
+  .forEach((link) => {
+    link.addEventListener(
+      "click",
+      closeMobileMenu
+    );
+  });
+
+/* =========================================
+   REVEAL ANIMATIONS
+========================================= */
+
+const revealElements =
+  document.querySelectorAll(
+    ".reveal-left, .reveal-right, .reveal-up"
+  );
+
+if (
+  "IntersectionObserver" in window
+) {
+  const revealObserver =
+    new IntersectionObserver(
+      (
+        entries,
+        observer
+      ) => {
+        entries.forEach(
+          (entry) => {
+            if (
+              entry.isIntersecting
+            ) {
+              entry.target.classList.add(
+                "visible"
+              );
+
+              observer.unobserve(
+                entry.target
+              );
+            }
+          }
+        );
+      },
+      {
+        threshold: 0.12,
+        rootMargin:
+          "0px 0px -40px 0px",
+      }
+    );
+
+  revealElements.forEach(
+    (element) => {
+      revealObserver.observe(
+        element
+      );
+    }
+  );
+} else {
+  revealElements.forEach(
+    (element) => {
+      element.classList.add(
+        "visible"
+      );
+    }
+  );
+}
+
+/* =========================================
+   COUNTERS
+========================================= */
+
+const counters =
+  document.querySelectorAll(
+    ".counter"
+  );
+
+const counterSection =
+  document.querySelector(
+    ".stats-section"
+  );
+
+let countersStarted = false;
+
+const animateCounter = (
+  counter
+) => {
+  const target =
+    Number(
+      counter.dataset.target
+    );
+
+  const duration =
+    1000;
+
+  const start =
+    performance.now();
+
+  const update = (
+    time
+  ) => {
+    const progress =
+      Math.min(
+        (time - start) /
+          duration,
+        1
+      );
+
+    const eased =
+      1 -
+      Math.pow(
+        1 - progress,
+        3
+      );
+
+    counter.textContent =
+      Math.floor(
+        target * eased
+      );
+
+    if (
+      progress < 1
+    ) {
+      requestAnimationFrame(
+        update
+      );
+    } else {
+      counter.textContent =
+        target;
+    }
+  };
+
+  requestAnimationFrame(
+    update
+  );
+};
+
+if (
+  counterSection &&
+  "IntersectionObserver" in window
+) {
+  const counterObserver =
+    new IntersectionObserver(
+      (entries) => {
+        entries.forEach(
+          (entry) => {
+            if (
+              entry.isIntersecting &&
+              !countersStarted
+            ) {
+              countersStarted =
+                true;
+
+              counters.forEach(
+                animateCounter
+              );
+            }
+          }
+        );
+      },
+      {
+        threshold: 0.4,
+      }
+    );
+
+  counterObserver.observe(
+    counterSection
+  );
+} else {
+  counters.forEach(
+    (counter) => {
+      counter.textContent =
+        counter.dataset.target;
+    }
+  );
+}
+
+/* =========================================
+   ACTIVE NAV
+========================================= */
+
+const sections =
+  document.querySelectorAll(
+    "main section[id]"
+  );
+
+const navLinks =
+  document.querySelectorAll(
+    ".desktop-nav a"
+  );
+
+const setActiveNav = () => {
+  let currentId = "";
+
+  sections.forEach(
+    (section) => {
+      const top =
+        section.offsetTop -
+        180;
+
+      const bottom =
+        top +
+        section.offsetHeight;
+
+      if (
+        window.scrollY >= top &&
+        window.scrollY < bottom
+      ) {
+        currentId =
+          section.id;
+      }
+    }
+  );
+
+  navLinks.forEach(
+    (link) => {
+      link.classList.toggle(
+        "active",
+        link.getAttribute(
+          "href"
+        ) ===
+          `#${currentId}`
+      );
+    }
+  );
+};
+
+window.addEventListener(
+  "scroll",
+  setActiveNav,
+  {
+    passive: true,
+  }
+);
+
+setActiveNav();
+
+/* =========================================
+   MODAL
+========================================= */
 
 const openModal = (
   projectKey
 ) => {
-
   currentProjectKey =
     projectKey;
 
@@ -1842,28 +1682,26 @@ const openModal = (
     projectKey
   );
 
-  modal.classList.add(
+  modal?.classList.add(
     "open"
   );
 
   body.style.overflow =
     "hidden";
-
 };
 
-const closeModal = () => {
+const closeModal =
+  () => {
+    modal?.classList.remove(
+      "open"
+    );
 
-  modal.classList.remove(
-    "open"
-  );
+    body.style.overflow =
+      "";
 
-  body.style.overflow =
-    "";
-
-  currentProjectKey =
-    null;
-
-};
+    currentProjectKey =
+      null;
+  };
 
 document
   .querySelectorAll(
@@ -1871,18 +1709,14 @@ document
   )
   .forEach(
     (button) => {
-
       button.addEventListener(
         "click",
         () => {
-
           openModal(
             button.dataset.project
           );
-
         }
       );
-
     }
   );
 
@@ -1892,30 +1726,24 @@ document
   )
   .forEach(
     (element) => {
-
       element.addEventListener(
         "click",
         closeModal
       );
-
     }
   );
 
 document.addEventListener(
   "keydown",
   (event) => {
-
     if (
       event.key ===
         "Escape" &&
-      modal.classList.contains(
+      modal?.classList.contains(
         "open"
       )
     ) {
-
       closeModal();
-
     }
-
   }
 );

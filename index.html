@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8" />
 
@@ -24,11 +24,12 @@
     Susanna Margaryan | Frontend Developer, Angular & Shopify
   </title>
 
+  <link rel="icon" type="image/png" href="./assets/icons/favicon.png" />
+
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
-
   <div class="page-bg page-bg-one"></div>
   <div class="page-bg page-bg-two"></div>
 
@@ -39,67 +40,35 @@
 
       <a href="#home" class="brand">
         <span class="brand-logo">SM</span>
-
-        <span class="brand-name">
-          Susanna Margaryan
-        </span>
+        <span class="brand-name">Susanna Margaryan</span>
       </a>
 
-      <nav class="desktop-nav" aria-label="Primary navigation">
-
-        <a href="#about" data-i18n="nav.about">
-          About
-        </a>
-
-        <a href="#experience" data-i18n="nav.experience">
-          Experience
-        </a>
-
-        <a href="#projects" data-i18n="nav.projects">
-          Projects
-        </a>
-
-        <a href="#expertise" data-i18n="nav.expertise">
-          Expertise
-        </a>
-
-        <a href="#skills" data-i18n="nav.skills">
-          Skills
-        </a>
-
-        <a href="#contact" data-i18n="nav.contact">
-          Contact
-        </a>
-
+      <nav class="desktop-nav">
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#expertise" data-i18n="nav.expertise">Expertise</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
 
       <div class="header-actions">
 
         <div class="language-switch">
-
-          <button
-            class="language-btn active"
-            data-lang="en"
-            type="button"
-          >
+          <button class="language-btn active" data-lang="en" type="button">
             EN
           </button>
 
-          <button
-            class="language-btn"
-            data-lang="hy"
-            type="button"
-          >
+          <button class="language-btn" data-lang="hy" type="button">
             HY
           </button>
-
         </div>
 
         <button
           class="theme-toggle"
           id="themeToggle"
-          aria-label="Toggle theme"
           type="button"
+          aria-label="Toggle theme"
         >
           <span class="theme-icon moon">☾</span>
           <span class="theme-icon sun">☀</span>
@@ -119,9 +88,9 @@
         <button
           class="mobile-menu-btn"
           id="mobileMenuBtn"
+          type="button"
           aria-label="Open menu"
           aria-expanded="false"
-          type="button"
         >
           <span></span>
           <span></span>
@@ -129,14 +98,9 @@
         </button>
 
       </div>
-
     </div>
 
-    <nav
-      class="mobile-nav"
-      id="mobileNav"
-      aria-label="Mobile navigation"
-    >
+    <nav class="mobile-nav" id="mobileNav">
       <a href="#about" data-i18n="nav.about">About</a>
       <a href="#experience" data-i18n="nav.experience">Experience</a>
       <a href="#projects" data-i18n="nav.projects">Projects</a>
@@ -144,7 +108,6 @@
       <a href="#skills" data-i18n="nav.skills">Skills</a>
       <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
-
   </header>
 
   <main>
@@ -152,46 +115,33 @@
     <!-- HERO -->
 
     <section class="hero section" id="home">
-
       <div class="container hero-grid">
 
         <div class="hero-content reveal-left">
 
           <div class="availability-badge">
-
             <span class="availability-dot"></span>
 
             <span data-i18n="hero.available">
               Available for new opportunities
             </span>
-
           </div>
 
           <h1>
-
             <span data-i18n="hero.title1">
               Building scalable applications
             </span>
 
             <br />
 
-            <span data-i18n="hero.and">
-              &
-            </span>
+            <span data-i18n="hero.and">&</span>
 
-            <span
-              class="gradient-text"
-              data-i18n="hero.title2"
-            >
+            <span class="gradient-text" data-i18n="hero.title2">
               high-converting digital experiences.
             </span>
-
           </h1>
 
-          <p
-            class="hero-description"
-            data-i18n="hero.description"
-          >
+          <p class="hero-description" data-i18n="hero.description">
             I'm Susanna Margaryan, a Frontend Developer with 6 years of
             commercial experience specializing in Angular, modern frontend
             architecture, and e-commerce development.
@@ -228,13 +178,8 @@
           <div class="hero-actions">
 
             <a href="#projects" class="btn btn-primary">
-
-              <span data-i18n="common.viewWork">
-                View My Work
-              </span>
-
+              <span data-i18n="common.viewWork">View My Work</span>
               <span>→</span>
-
             </a>
 
             <a
@@ -243,21 +188,12 @@
               download
             >
               <span>↓</span>
-
-              <span data-i18n="common.downloadCv">
-                Download CV
-              </span>
+              <span data-i18n="common.downloadCv">Download CV</span>
             </a>
 
-            <a
-              href="#contact"
-              class="btn btn-outline"
-            >
+            <a href="#contact" class="btn btn-outline">
               <span>✈</span>
-
-              <span data-i18n="common.letsTalk">
-                Let's Talk
-              </span>
+              <span data-i18n="common.letsTalk">Let's Talk</span>
             </a>
 
           </div>
@@ -301,271 +237,178 @@
           <div class="portrait-glow"></div>
 
           <div class="portrait-frame">
-
             <img
               src="./assets/images/me.jpg"
               alt="Susanna Margaryan"
               class="portrait"
             />
-
           </div>
 
-          <div
-            class="floating-label frontend-label"
-            data-i18n="hero.frontendDeveloper"
-          >
+          <div class="frontend-label" data-i18n="hero.frontendDeveloper">
             Frontend Developer
           </div>
 
           <div class="vertical-note">
-
-            <span data-i18n="hero.turning">
-              TURNING
-            </span>
-
-            <span data-i18n="hero.ideas">
-              IDEAS INTO
-            </span>
-
-            <span data-i18n="hero.products">
-              REAL PRODUCTS
-            </span>
-
+            <span data-i18n="hero.turning">TURNING</span>
+            <span data-i18n="hero.ideas">IDEAS INTO</span>
+            <span data-i18n="hero.products">REAL PRODUCTS</span>
           </div>
 
         </div>
 
       </div>
-
     </section>
 
     <!-- STATS -->
 
     <section class="stats-section">
-
       <div class="container stats-grid">
 
         <article class="stat-card reveal-up">
-
           <div class="stat-icon">▣</div>
 
           <div>
             <strong class="counter" data-target="6">0</strong>
             <span class="plus">+</span>
-
-            <p data-i18n="stats.years">
-              Years of Experience
-            </p>
+            <p data-i18n="stats.years">Years of Experience</p>
           </div>
-
         </article>
 
         <article class="stat-card reveal-up">
-
           <div class="stat-icon">◇</div>
 
           <div>
             <strong class="counter" data-target="8">0</strong>
             <span class="plus">+</span>
-
-            <p data-i18n="stats.projects">
-              Commercial Projects
-            </p>
+            <p data-i18n="stats.projects">Commercial Projects</p>
           </div>
-
         </article>
 
         <article class="stat-card reveal-up">
-
           <div class="stat-icon">◎</div>
 
           <div>
-            <strong data-i18n="stats.multiple">
-              Multiple
-            </strong>
-
-            <p data-i18n="stats.domains">
-              Business Domains
-            </p>
+            <strong data-i18n="stats.multiple">Multiple</strong>
+            <p data-i18n="stats.domains">Business Domains</p>
           </div>
-
         </article>
 
         <article class="stat-card reveal-up">
-
           <div class="stat-icon">ϟ</div>
 
           <div>
-            <strong data-i18n="stats.endToEnd">
-              End-to-End
-            </strong>
-
+            <strong data-i18n="stats.endToEnd">End-to-End</strong>
             <p data-i18n="stats.productDevelopment">
               Product Development
             </p>
           </div>
-
         </article>
 
       </div>
-
     </section>
 
     <!-- ABOUT -->
 
     <section class="section about" id="about">
+      <div class="container about-grid">
 
-      <div class="container">
+        <div class="reveal-left">
 
-        <div class="about-grid">
+          <span class="section-label" data-i18n="about.label">
+            ABOUT ME
+          </span>
 
-          <div class="reveal-left">
+          <h2 data-i18n="about.title">
+            Frontend Developer with a passion for creating meaningful products.
+          </h2>
 
-            <span
-              class="section-label"
-              data-i18n="about.label"
-            >
-              ABOUT ME
-            </span>
+          <p data-i18n="about.paragraph1">
+            I enjoy solving complex problems, building clean and maintainable
+            code, creating intuitive user interfaces, and taking products from
+            an idea to production.
+          </p>
 
-            <h2 data-i18n="about.title">
-              Frontend Developer with a passion for creating meaningful products.
-            </h2>
+          <p data-i18n="about.paragraph2">
+            Over the years, I've worked across e-commerce, media, hospitality,
+            healthcare, IoT and enterprise systems.
+          </p>
 
-            <p data-i18n="about.paragraph1">
-              I enjoy solving complex problems, building clean and maintainable
-              code, creating intuitive user interfaces, and taking products from
-              an idea to production.
-            </p>
-
-            <p data-i18n="about.paragraph2">
-              Over the years, I've worked across e-commerce, media, hospitality,
-              healthcare, IoT and enterprise systems.
-            </p>
-
-            <a
-              href="#experience"
-              class="text-btn"
-            >
-              <span data-i18n="about.more">
-                More About Me
-              </span>
-
-              <span>→</span>
-            </a>
-
-          </div>
-
-          <div class="about-info-card reveal-up">
-
-            <article>
-
-              <div class="info-icon">⌖</div>
-
-              <div>
-                <span data-i18n="about.based">
-                  Based in
-                </span>
-
-                <strong data-i18n="about.armenia">
-                  Armenia
-                </strong>
-              </div>
-
-            </article>
-
-            <article>
-
-              <div class="info-icon">▣</div>
-
-              <div>
-                <span data-i18n="about.commercial">
-                  Commercial
-                </span>
-
-                <strong data-i18n="about.sixYears">
-                  6 Years Experience
-                </strong>
-              </div>
-
-            </article>
-
-            <article>
-
-              <div class="info-icon">&lt;/&gt;</div>
-
-              <div>
-                <span data-i18n="about.frontend">
-                  Frontend
-                </span>
-
-                <strong data-i18n="about.engineering">
-                  Engineering
-                </strong>
-              </div>
-
-            </article>
-
-            <article>
-
-              <div class="info-icon">⌑</div>
-
-              <div>
-                <span data-i18n="about.ecommerce">
-                  E-commerce
-                </span>
-
-                <strong data-i18n="about.development">
-                  Development
-                </strong>
-              </div>
-
-            </article>
-
-          </div>
-
-          <blockquote class="about-quote reveal-right">
-
-            <p data-i18n="about.quote">
-              “I believe great software is a combination of clean code,
-              thoughtful design and a deep understanding of the people who use it.”
-            </p>
-
-            <span>
-              Susanna Margaryan
-            </span>
-
-          </blockquote>
+          <a href="#experience" class="text-btn">
+            <span data-i18n="about.more">More About Me</span>
+            <span>→</span>
+          </a>
 
         </div>
 
-      </div>
+        <div class="about-info-card reveal-up">
 
+          <article>
+            <div class="info-icon">⌖</div>
+
+            <div>
+              <span data-i18n="about.based">Based in</span>
+              <strong data-i18n="about.armenia">Armenia</strong>
+            </div>
+          </article>
+
+          <article>
+            <div class="info-icon">▣</div>
+
+            <div>
+              <span data-i18n="about.commercial">Commercial</span>
+              <strong data-i18n="about.sixYears">
+                6 Years Experience
+              </strong>
+            </div>
+          </article>
+
+          <article>
+            <div class="info-icon">&lt;/&gt;</div>
+
+            <div>
+              <span data-i18n="about.frontend">Frontend</span>
+              <strong data-i18n="about.engineering">Engineering</strong>
+            </div>
+          </article>
+
+          <article>
+            <div class="info-icon">⌑</div>
+
+            <div>
+              <span data-i18n="about.ecommerce">E-commerce</span>
+              <strong data-i18n="about.development">Development</strong>
+            </div>
+          </article>
+
+        </div>
+
+        <blockquote class="about-quote reveal-right">
+          <p data-i18n="about.quote">
+            “I believe great software is a combination of clean code,
+            thoughtful design and a deep understanding of the people who use it.”
+          </p>
+
+          <span>Susanna Margaryan</span>
+        </blockquote>
+
+      </div>
     </section>
 
     <!-- PROJECTS -->
 
     <section class="section projects" id="projects">
-
       <div class="container">
 
         <div class="section-header">
-
           <div>
-
-            <span
-              class="section-label"
-              data-i18n="projects.label"
-            >
+            <span class="section-label" data-i18n="projects.label">
               FEATURED PROJECTS
             </span>
 
             <h2 data-i18n="projects.title">
               Selected commercial work
             </h2>
-
           </div>
-
         </div>
 
         <div class="projects-grid">
@@ -575,16 +418,13 @@
           <article class="project-card reveal-up">
 
             <div class="project-image-wrap">
-
               <img
                 src="./assets/images/bcode.png"
                 alt="Business Code project"
               />
-
             </div>
 
             <div class="project-body">
-
               <h3>Business Code</h3>
 
               <span
@@ -600,27 +440,18 @@
               </p>
 
               <div class="project-tags">
-
-                <span data-i18n="projects.tags.news">
-                  News
-                </span>
-
-                <span data-i18n="projects.tags.search">
-                  Search
-                </span>
-
+                <span data-i18n="projects.tags.news">News</span>
+                <span data-i18n="projects.tags.search">Search</span>
                 <span data-i18n="projects.tags.discovery">
                   Content Discovery
                 </span>
-
               </div>
 
               <div class="project-footer">
-
                 <button
+                  type="button"
                   class="case-study-btn"
                   data-project="business-code"
-                  type="button"
                 >
                   <span data-i18n="common.viewCaseStudy">
                     View Case Study
@@ -635,28 +466,23 @@
                 >
                   ↗
                 </a>
-
               </div>
-
             </div>
 
           </article>
 
-          <!-- YEREVAN CITY -->
+          <!-- CITY -->
 
           <article class="project-card reveal-up">
 
             <div class="project-image-wrap">
-
               <img
                 src="./assets/images/city.png"
                 alt="Yerevan City project"
               />
-
             </div>
 
             <div class="project-body">
-
               <h3>Yerevan City</h3>
 
               <span
@@ -672,27 +498,16 @@
               </p>
 
               <div class="project-tags">
-
-                <span data-i18n="projects.tags.ecommerce">
-                  E-commerce
-                </span>
-
-                <span data-i18n="projects.tags.catalog">
-                  Product Catalog
-                </span>
-
-                <span data-i18n="projects.tags.promotions">
-                  Promotions
-                </span>
-
+                <span data-i18n="projects.tags.ecommerce">E-commerce</span>
+                <span data-i18n="projects.tags.catalog">Product Catalog</span>
+                <span data-i18n="projects.tags.promotions">Promotions</span>
               </div>
 
               <div class="project-footer">
-
                 <button
+                  type="button"
                   class="case-study-btn"
                   data-project="yerevan-city"
-                  type="button"
                 >
                   <span data-i18n="common.viewCaseStudy">
                     View Case Study
@@ -707,28 +522,23 @@
                 >
                   ↗
                 </a>
-
               </div>
-
             </div>
 
           </article>
 
-          <!-- ALFAPHARM -->
+          <!-- ALFA -->
 
           <article class="project-card reveal-up">
 
             <div class="project-image-wrap">
-
               <img
                 src="./assets/images/alpha.png"
                 alt="AlfaPharm project"
               />
-
             </div>
 
             <div class="project-body">
-
               <h3>AlfaPharm</h3>
 
               <span
@@ -744,27 +554,16 @@
               </p>
 
               <div class="project-tags">
-
-                <span data-i18n="projects.tags.healthcare">
-                  Healthcare
-                </span>
-
-                <span data-i18n="projects.tags.ecommerce">
-                  E-commerce
-                </span>
-
-                <span data-i18n="projects.tags.catalog">
-                  Product Catalog
-                </span>
-
+                <span data-i18n="projects.tags.healthcare">Healthcare</span>
+                <span data-i18n="projects.tags.ecommerce">E-commerce</span>
+                <span data-i18n="projects.tags.catalog">Product Catalog</span>
               </div>
 
               <div class="project-footer">
-
                 <button
+                  type="button"
                   class="case-study-btn"
                   data-project="alfapharm"
-                  type="button"
                 >
                   <span data-i18n="common.viewCaseStudy">
                     View Case Study
@@ -779,9 +578,7 @@
                 >
                   ↗
                 </a>
-
               </div>
-
             </div>
 
           </article>
@@ -791,13 +588,10 @@
           <article class="project-card reveal-up">
 
             <div class="project-placeholder">
-
               <span>RZ</span>
-
             </div>
 
             <div class="project-body">
-
               <h3>RezX</h3>
 
               <span
@@ -813,7 +607,6 @@
               </p>
 
               <div class="project-tags">
-
                 <span data-i18n="projects.tags.reservations">
                   Reservations
                 </span>
@@ -823,15 +616,13 @@
                 <span data-i18n="projects.tags.guestManagement">
                   Guest Management
                 </span>
-
               </div>
 
               <div class="project-footer">
-
                 <button
+                  type="button"
                   class="case-study-btn"
                   data-project="rezx"
-                  type="button"
                 >
                   <span data-i18n="common.viewCaseStudy">
                     View Case Study
@@ -846,9 +637,7 @@
                 >
                   ↗
                 </a>
-
               </div>
-
             </div>
 
           </article>
@@ -862,7 +651,6 @@
             </div>
 
             <div class="project-body">
-
               <h3>PetPace</h3>
 
               <span
@@ -878,7 +666,6 @@
               </p>
 
               <div class="project-tags">
-
                 <span>IoT</span>
 
                 <span data-i18n="projects.tags.dashboards">
@@ -888,15 +675,13 @@
                 <span data-i18n="projects.tags.healthMonitoring">
                   Health Monitoring
                 </span>
-
               </div>
 
               <div class="project-footer">
-
                 <button
+                  type="button"
                   class="case-study-btn"
                   data-project="petpace"
-                  type="button"
                 >
                   <span data-i18n="common.viewCaseStudy">
                     View Case Study
@@ -911,14 +696,12 @@
                 >
                   ↗
                 </a>
-
               </div>
-
             </div>
 
           </article>
 
-          <!-- WATCH GALLERY -->
+          <!-- WATCH -->
 
           <article class="project-card reveal-up">
 
@@ -927,7 +710,6 @@
             </div>
 
             <div class="project-body">
-
               <h3>WATCH GALLERY</h3>
 
               <span
@@ -944,69 +726,53 @@
               </p>
 
               <div class="project-tags">
-
                 <span>Shopify</span>
                 <span>Liquid</span>
 
                 <span data-i18n="projects.tags.themeDevelopment">
                   Theme Development
                 </span>
-
               </div>
 
               <div class="project-footer">
-
                 <button
+                  type="button"
                   class="case-study-btn"
                   data-project="watch-gallery"
-                  type="button"
                 >
                   <span data-i18n="common.viewCaseStudy">
                     View Case Study
                   </span>
                   →
                 </button>
-
               </div>
-
             </div>
 
           </article>
 
         </div>
-
       </div>
-
     </section>
 
-    <!-- SHOPIFY EXPERTISE -->
+    <!-- EXPERTISE -->
 
     <section class="section expertise" id="expertise">
-
       <div class="container expertise-grid">
 
         <div class="reveal-left">
 
-          <span
-            class="section-label"
-            data-i18n="expertise.label"
-          >
+          <span class="section-label" data-i18n="expertise.label">
             SHOPIFY & E-COMMERCE
           </span>
 
           <h2>
-
             <span data-i18n="expertise.title1">
               Building complete
             </span>
 
-            <span
-              class="gradient-text"
-              data-i18n="expertise.title2"
-            >
+            <span class="gradient-text" data-i18n="expertise.title2">
               e-commerce experiences.
             </span>
-
           </h2>
 
           <p data-i18n="expertise.description">
@@ -1016,14 +782,10 @@
             conversion-focused storefronts.
           </p>
 
-          <a
-            href="#contact"
-            class="btn btn-primary"
-          >
+          <a href="#contact" class="btn btn-primary">
             <span data-i18n="expertise.cta">
               Start a Shopify Project
             </span>
-
             <span>→</span>
           </a>
 
@@ -1032,7 +794,6 @@
         <div class="expertise-list">
 
           <article class="expertise-card reveal-up">
-
             <span>01</span>
 
             <h3 data-i18n="expertise.theme.title">
@@ -1043,11 +804,9 @@
               Customizing and extending Shopify themes to create polished
               branded storefronts.
             </p>
-
           </article>
 
           <article class="expertise-card reveal-up">
-
             <span>02</span>
 
             <h3 data-i18n="expertise.liquid.title">
@@ -1058,11 +817,9 @@
               Custom Liquid sections, components, product templates and reusable
               storefront functionality.
             </p>
-
           </article>
 
           <article class="expertise-card reveal-up">
-
             <span>03</span>
 
             <h3 data-i18n="expertise.architecture.title">
@@ -1073,11 +830,9 @@
               Product structures, collections, navigation, shipping, payments
               and store configuration.
             </p>
-
           </article>
 
           <article class="expertise-card reveal-up">
-
             <span>04</span>
 
             <h3 data-i18n="expertise.ux.title">
@@ -1088,112 +843,75 @@
               Responsive and user-focused shopping journeys designed for
               product discovery and conversion.
             </p>
-
           </article>
 
         </div>
 
       </div>
-
     </section>
 
     <!-- SKILLS -->
 
     <section class="section skills" id="skills">
-
       <div class="container">
 
-        <span
-          class="section-label"
-          data-i18n="skills.label"
-        >
+        <span class="section-label" data-i18n="skills.label">
           SKILLS & EXPERTISE
         </span>
 
         <div class="skills-heading">
-
           <h2 data-i18n="skills.title">
             Technologies I work with
           </h2>
 
           <p data-i18n="skills.description">
-            A combination of frontend, e-commerce and modern engineering practices.
+            A combination of frontend, e-commerce and modern engineering
+            practices.
           </p>
-
         </div>
 
         <div class="skill-highlight-grid">
 
           <article class="skill-card reveal-up">
-
             <div class="skill-logo angular">A</div>
-
             <h3>Angular</h3>
-
-            <span data-i18n="skills.core">
-              Core specialization
-            </span>
-
+            <span data-i18n="skills.core">Core specialization</span>
           </article>
 
           <article class="skill-card reveal-up">
-
             <div class="skill-logo typescript">TS</div>
-
             <h3>TypeScript</h3>
-
             <span data-i18n="skills.frontendEngineering">
               Frontend engineering
             </span>
-
           </article>
 
           <article class="skill-card reveal-up">
-
             <div class="skill-logo javascript">JS</div>
-
             <h3>JavaScript</h3>
-
-            <span data-i18n="skills.modernWeb">
-              Modern web
-            </span>
-
+            <span data-i18n="skills.modernWeb">Modern web</span>
           </article>
 
           <article class="skill-card reveal-up">
-
             <div class="skill-logo rxjs">R</div>
-
             <h3>RxJS</h3>
-
             <span data-i18n="skills.reactive">
               Reactive programming
             </span>
-
           </article>
 
           <article class="skill-card reveal-up">
-
             <div class="skill-logo shopify">S</div>
-
             <h3>Shopify</h3>
-
-            <span data-i18n="skills.ecommerce">
-              E-commerce
-            </span>
-
+            <span data-i18n="skills.ecommerce">E-commerce</span>
           </article>
 
           <article class="skill-card reveal-up">
-
             <div class="skill-logo liquid">L</div>
-
             <h3>Liquid</h3>
-
             <span data-i18n="skills.shopifyDev">
               Shopify development
             </span>
-
           </article>
 
         </div>
@@ -1201,7 +919,6 @@
         <div class="skills-categories">
 
           <article class="skills-category reveal-up">
-
             <h3 data-i18n="skills.modernAngular">
               Modern Angular
             </h3>
@@ -1213,11 +930,9 @@
               <span>Reactive Programming</span>
               <span>Reusable Components</span>
             </div>
-
           </article>
 
           <article class="skills-category reveal-up">
-
             <h3 data-i18n="skills.architecture">
               Architecture & Engineering
             </h3>
@@ -1232,11 +947,9 @@
               <span>GitHub</span>
               <span>GitLab</span>
             </div>
-
           </article>
 
           <article class="skills-category reveal-up">
-
             <h3 data-i18n="skills.ui">
               UI & Styling
             </h3>
@@ -1249,11 +962,9 @@
               <span>Bootstrap</span>
               <span>Responsive UI</span>
             </div>
-
           </article>
 
           <article class="skills-category reveal-up">
-
             <h3 data-i18n="skills.additional">
               Additional
             </h3>
@@ -1263,27 +974,21 @@
               <span>C#</span>
               <span>LESS</span>
             </div>
-
           </article>
 
         </div>
 
       </div>
-
     </section>
 
     <!-- EXPERIENCE -->
 
     <section class="section experience" id="experience">
-
       <div class="container experience-layout">
 
         <div class="experience-intro reveal-left">
 
-          <span
-            class="section-label"
-            data-i18n="experience.label"
-          >
+          <span class="section-label" data-i18n="experience.label">
             EXPERIENCE
           </span>
 
@@ -1307,23 +1012,15 @@
             <div class="timeline-card">
 
               <div class="timeline-heading">
-
                 <div>
-
-                  <h3>
-                    IDT — Intelligent Digital Technologies
-                  </h3>
+                  <h3>IDT — Intelligent Digital Technologies</h3>
 
                   <span data-i18n="experience.frontendDeveloper">
                     Frontend Developer
                   </span>
-
                 </div>
 
-                <time>
-                  Feb 2025 – Present
-                </time>
-
+                <time>Feb 2025 – Present</time>
               </div>
 
               <p data-i18n="experience.idt">
@@ -1343,21 +1040,15 @@
             <div class="timeline-card">
 
               <div class="timeline-heading">
-
                 <div>
-
                   <h3>Inline LLC</h3>
 
                   <span data-i18n="experience.frontendWebDeveloper">
                     Frontend Web Developer
                   </span>
-
                 </div>
 
-                <time>
-                  Sep 2022 – Feb 2025
-                </time>
-
+                <time>Sep 2022 – Feb 2025</time>
               </div>
 
               <p data-i18n="experience.inline">
@@ -1377,21 +1068,15 @@
             <div class="timeline-card">
 
               <div class="timeline-heading">
-
                 <div>
-
                   <h3>REXSoft</h3>
 
                   <span data-i18n="experience.frontendDeveloper">
                     Frontend Developer
                   </span>
-
                 </div>
 
-                <time>
-                  Jan 2024 – Feb 2025
-                </time>
-
+                <time>Jan 2024 – Feb 2025</time>
               </div>
 
               <p data-i18n="experience.rexsoft">
@@ -1410,21 +1095,15 @@
             <div class="timeline-card">
 
               <div class="timeline-heading">
-
                 <div>
-
                   <h3>Digital Threads</h3>
 
                   <span data-i18n="experience.vueDeveloper">
                     Frontend Developer — Vue.js
                   </span>
-
                 </div>
 
-                <time>
-                  Jul 2022 – Sep 2022
-                </time>
-
+                <time>Jul 2022 – Sep 2022</time>
               </div>
 
               <p data-i18n="experience.digitalThreads">
@@ -1443,21 +1122,15 @@
             <div class="timeline-card">
 
               <div class="timeline-heading">
-
                 <div>
-
                   <h3>Codeex</h3>
 
                   <span data-i18n="experience.middleAngular">
                     Middle Angular Developer
                   </span>
-
                 </div>
 
-                <time>
-                  Mar 2022 – Jul 2022
-                </time>
-
+                <time>Mar 2022 – Jul 2022</time>
               </div>
 
               <p data-i18n="experience.codeex">
@@ -1476,21 +1149,15 @@
             <div class="timeline-card">
 
               <div class="timeline-heading">
-
                 <div>
-
                   <h3>ArmBoldMind</h3>
 
                   <span data-i18n="experience.frontendWebDeveloper">
                     Frontend Web Developer
                   </span>
-
                 </div>
 
-                <time>
-                  Dec 2020 – Mar 2022
-                </time>
-
+                <time>Dec 2020 – Mar 2022</time>
               </div>
 
               <p data-i18n="experience.armboldmind">
@@ -1505,23 +1172,16 @@
         </div>
 
       </div>
-
     </section>
 
     <!-- CONFIDENTIAL -->
 
     <section class="section confidential-work">
-
       <div class="container">
 
         <div class="section-header">
-
           <div>
-
-            <span
-              class="section-label"
-              data-i18n="confidential.label"
-            >
+            <span class="section-label" data-i18n="confidential.label">
               ADDITIONAL COMMERCIAL WORK
             </span>
 
@@ -1536,15 +1196,12 @@
               Some commercial products are protected by confidentiality
               agreements, so client names and screenshots cannot be shared publicly.
             </p>
-
           </div>
-
         </div>
 
         <div class="confidential-grid">
 
           <article class="confidential-card reveal-up">
-
             <span>01</span>
 
             <h3 data-i18n="confidential.staff.title">
@@ -1555,11 +1212,9 @@
               Comprehensive staff management platform for employee
               administration and organizational workflows.
             </p>
-
           </article>
 
           <article class="confidential-card reveal-up">
-
             <span>02</span>
 
             <h3 data-i18n="confidential.land.title">
@@ -1570,11 +1225,9 @@
               Specialized control platform for managing surveying workflows,
               operational data and administrative processes.
             </p>
-
           </article>
 
           <article class="confidential-card reveal-up">
-
             <span>03</span>
 
             <h3 data-i18n="confidential.wedding.title">
@@ -1585,27 +1238,21 @@
               Modern digital product designed to organize and simplify
               different aspects of wedding planning.
             </p>
-
           </article>
 
         </div>
 
       </div>
-
     </section>
 
     <!-- EDUCATION -->
 
     <section class="section education">
-
       <div class="container education-grid">
 
         <article class="education-card reveal-left">
 
-          <span
-            class="section-label"
-            data-i18n="education.label"
-          >
+          <span class="section-label" data-i18n="education.label">
             EDUCATION
           </span>
 
@@ -1617,51 +1264,31 @@
             Computer Science
           </p>
 
-          <span>
-            2017 – 2021
-          </span>
+          <span>2017 – 2021</span>
 
         </article>
 
         <article class="education-card reveal-right">
 
-          <span
-            class="section-label"
-            data-i18n="languages.label"
-          >
+          <span class="section-label" data-i18n="languages.label">
             LANGUAGES
           </span>
 
           <div class="language-list">
 
             <div>
-              <strong data-i18n="languages.armenian">
-                Armenian
-              </strong>
-
-              <span data-i18n="languages.native">
-                Native
-              </span>
+              <strong data-i18n="languages.armenian">Armenian</strong>
+              <span data-i18n="languages.native">Native</span>
             </div>
 
             <div>
-              <strong data-i18n="languages.english">
-                English
-              </strong>
-
-              <span>
-                B2
-              </span>
+              <strong data-i18n="languages.english">English</strong>
+              <span>B2</span>
             </div>
 
             <div>
-              <strong data-i18n="languages.russian">
-                Russian
-              </strong>
-
-              <span>
-                A1
-              </span>
+              <strong data-i18n="languages.russian">Russian</strong>
+              <span>A1</span>
             </div>
 
           </div>
@@ -1669,21 +1296,16 @@
         </article>
 
       </div>
-
     </section>
 
     <!-- CONTACT -->
 
     <section class="section contact" id="contact">
-
       <div class="container contact-grid">
 
         <div class="contact-intro reveal-left">
 
-          <span
-            class="section-label"
-            data-i18n="contact.label"
-          >
+          <span class="section-label" data-i18n="contact.label">
             LET'S WORK TOGETHER
           </span>
 
@@ -1733,10 +1355,7 @@
 
         <div class="contact-actions-panel reveal-right">
 
-          <span
-            class="section-label"
-            data-i18n="contact.getInTouch"
-          >
+          <span class="section-label" data-i18n="contact.getInTouch">
             GET IN TOUCH
           </span>
 
@@ -1756,10 +1375,7 @@
               class="btn btn-primary"
             >
               <span>✉</span>
-
-              <span data-i18n="contact.emailMe">
-                Email Me
-              </span>
+              <span data-i18n="contact.emailMe">Email Me</span>
             </a>
 
             <a
@@ -1768,10 +1384,7 @@
               download
             >
               <span>↓</span>
-
-              <span data-i18n="common.downloadCv">
-                Download CV
-              </span>
+              <span data-i18n="common.downloadCv">Download CV</span>
             </a>
 
           </div>
@@ -1781,7 +1394,6 @@
             <span class="availability-dot"></span>
 
             <div>
-
               <strong data-i18n="contact.available">
                 Available for new opportunities
               </strong>
@@ -1789,7 +1401,6 @@
               <p data-i18n="contact.types">
                 Remote full-time · Freelance · Shopify / E-commerce
               </p>
-
             </div>
 
           </div>
@@ -1797,7 +1408,6 @@
         </div>
 
       </div>
-
     </section>
 
   </main>
@@ -1805,68 +1415,37 @@
   <!-- FOOTER -->
 
   <footer class="footer">
-
     <div class="container footer-grid">
 
       <div class="footer-brand">
-
         <strong>SM</strong>
-
-        <span>
-          Susanna Margaryan
-        </span>
-
-        <span class="footer-divider">
-          |
-        </span>
-
-        <span data-i18n="footer.role">
-          Frontend Developer
-        </span>
-
+        <span>Susanna Margaryan</span>
+        <span>|</span>
+        <span data-i18n="footer.role">Frontend Developer</span>
       </div>
 
       <nav>
-
-        <a href="#about" data-i18n="nav.about">
-          About
-        </a>
-
-        <a href="#projects" data-i18n="nav.projects">
-          Projects
-        </a>
-
-        <a href="#skills" data-i18n="nav.skills">
-          Skills
-        </a>
-
-        <a href="#contact" data-i18n="nav.contact">
-          Contact
-        </a>
-
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
 
       <span>
-        ©
-        <span id="currentYear"></span>
-        Susanna Margaryan.
+        © <span id="currentYear"></span> Susanna Margaryan.
         <span data-i18n="footer.rights">
           All rights reserved.
         </span>
       </span>
 
     </div>
-
   </footer>
 
-  <!-- CASE STUDY MODAL -->
+  <!-- MODAL -->
 
   <div class="modal" id="caseStudyModal">
 
-    <div
-      class="modal-backdrop"
-      data-close-modal
-    ></div>
+    <div class="modal-backdrop" data-close-modal></div>
 
     <div
       class="modal-content"
@@ -1876,27 +1455,21 @@
     >
 
       <button
-        class="modal-close"
         type="button"
+        class="modal-close"
         data-close-modal
         aria-label="Close modal"
       >
         ×
       </button>
 
-      <span
-        class="section-label"
-        id="modalCategory"
-      ></span>
+      <span class="section-label" id="modalCategory"></span>
 
       <h2 id="modalTitle"></h2>
 
       <p id="modalDescription"></p>
 
-      <div
-        class="modal-features"
-        id="modalFeatures"
-      ></div>
+      <div class="modal-features" id="modalFeatures"></div>
 
       <a
         href="#"
@@ -1917,6 +1490,5 @@
   </div>
 
   <script src="./js/main.js"></script>
-
 </body>
 </html>
